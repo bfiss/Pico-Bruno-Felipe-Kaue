@@ -6,8 +6,8 @@
 
 #include <stdio.h>
 
-enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _COMPOUND };
-enum opType  { _VAR, _TMP, _VAL, _EMPTY, _LIDX, _RIDX };
+enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };
+enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };
 
 /** 
  * Estrutura de dados (que implementa uma intrucao TAC, ver Etapa 4), a ser
@@ -21,7 +21,7 @@ struct tac {
    int     arg1;
    int     arg2;
    int     arg3;
-   char    op[2];
+   char    op[3];
 };
 
 /** \brief  Construtor de Instrucao TAC 

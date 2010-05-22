@@ -18,6 +18,7 @@ struct tac * create_inst_tac(const enum tacType type, const enum opType tArg1,
     assert(t);
     t->op[0] = op[0];
     t->op[1] = op[1];
+    t->op[2] = '\0';
     INICIALIZA(arg1);
     INICIALIZA(arg2);
     INICIALIZA(arg3);
@@ -29,8 +30,77 @@ struct tac * create_inst_tac(const enum tacType type, const enum opType tArg1,
 }
 
 void print_inst_tac(FILE* out, struct tac i) {
-   return;
-   /* fprintf(out, "%s\t:= %s %s %s\n", i.res, i.arg1, i.op, i.arg2); */
+    static int line = 0;
+    switch (i.type) {
+    case _LAB:
+	--line;
+	fprintf(out,"Label_%5i:\n",i.arg1);
+	break;
+    case _IF:
+	fprintf(out,"%03i:   IF ",line);
+	if( i.tArg1 == _VAL )
+	    fprintf(out,"%i ",i.arg1);
+	else
+	    fprintf(out,"%03i(%s) ",i.arg1,i.tArg1==_VAR?"SP":"Rx");
+	fprintf(out,"%s ",i.op);
+	if( i.tArg2 == _VAL )
+	    fprintf(out,"%i ",i.arg2);
+	else
+	    fprintf(out,"%03i(%s) ",i.arg2,i.tArg2==_VAR?"SP":"Rx");
+	fprintf(out,"GOTO Label_%5i:\n",i.arg3);
+	break;
+    case _GOTO:
+	fprintf(out,"%03i:   ",line);
+	fprintf(out,"GOTO Label_%5i:\n",i.arg1);
+	break;
+    case _PRINT:
+	fprintf(out,"%03i:   PRINT ",line);
+	if( i.tArg1 == _VAL )
+	    fprintf(out,"%i\n",i.arg1);
+	else
+	    fprintf(out,"%03i(%s)\n",i.arg1,i.tArg1==_VAR?"SP":"Rx");
+	break;
+    case _ATR:
+	fprintf(out,"%03i:   %03i(%s) := ",line,i.arg1,i.tArg1==_VAR?"SP":"Rx");
+	if( i.tArg2 == _VAL )
+	    fprintf(out,"%i",i.arg2);
+	else
+	    fprintf(out,"%03i(%s)",i.arg2,i.tArg2==_VAR?"SP":"Rx");
+	if( i.tArg3 == _EMPTY )
+	    fprintf(out,"\n");
+	else {
+	    switch(i.op[0]) {
+	    case '+' : fprintf(out," ADD "); break;
+	    case '-' : fprintf(out," SUB "); break;
+	    case '*' : fprintf(out," MUL "); break;
+	    case '/' : fprintf(out," DIV "); break;
+	    }
+	    if( i.tArg3 == _VAL )
+		fprintf(out,"%i\n",i.arg3);
+	    else
+		fprintf(out,"%03i(%s)\n",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+	}
+	break;
+    case _RIDX:
+	fprintf(out,"%03i:   %03i(%s) := %03i(SP)(",line,i.arg1,i.tArg1==_VAR?"SP":"Rx",i.arg2);
+	if( i.tArg3 == _VAL )
+	    fprintf(out,"%i)\n",i.arg3);
+	else
+	    fprintf(out,"%03i(%s))\n",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+	break;
+    case _LIDX:
+	fprintf(out,"%03i:   %03i(%s)(",line,i.arg1,i.tArg1==_VAR?"SP":"Rx");
+	if( i.tArg3 == _VAL )
+	    fprintf(out,"%i) := ",i.arg3);
+	else
+	    fprintf(out,"%03i(%s)) := ",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+	if( i.tArg2 == _VAL )
+	    fprintf(out,"%i\n",i.arg2);
+	else
+	    fprintf(out,"%03i(%s)\n",i.arg2,i.tArg2==_VAR?"SP":"Rx");
+	break;
+    }
+    ++line;
 }
 
 void print_tac(FILE* out, struct node_tac * code) {
