@@ -89,6 +89,7 @@
 %token NEXT
 %token REPEAT
 %token UNTIL
+%token PRINT
 
 %start code
 %left OR
@@ -179,6 +180,7 @@ chamaproc: IDF '(' listaexpr ')' { CHECK_IDF($1); $$ = Create_node(lineno, proc_
 enunciado: expr
          | IF '(' expbool ')' THEN acoes fiminstcontrole		{ $$ = Create_node(lineno, if_node, "IF", NULL, 3, $3, $6, $7); }
          | WHILE '(' expbool ')' '{' acoes '}'					{ $$ = Create_node(lineno, while_node, "WHILE", NULL, 2, $3, $6); }
+		 | PRINTF ( exp )										{ $$ = Create_node(lineno, print_node, "PRINT", NULL, 1, $3); }
          ;
 
 fiminstcontrole: END 			{ $$ = NULL; }
@@ -256,7 +258,7 @@ int increase_symbol_table() {
 		printf("Error: maximum block nestedness exceeded.\n");
 		return NESTED_LIMIT_EXCEEDED;
 	}
-	desloc[table_atual] = 0;
+	desloc[table_atual] = desloc[table_atual-1];
 	init_table(&s_table[table_atual],s_table[table_atual-1]);
         return 0;
 }

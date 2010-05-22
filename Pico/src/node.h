@@ -30,7 +30,7 @@ typedef int Node_type; /**< tipo do nó */
 #define return_node    311
 #define if_node        312 /* IF '(' expbool ')' THEN acoes fiminstcontrole */
 #define while_node     313 /* WHILE '(' expbool ')' '{' acoes '}' */
-#define print_node     314 /* nao existe na gramatica */
+#define print_node     314 /* PRINTF */
 #define cond_node      315 /* expbool */
 #define affect_node    316
 #define or_node        317 /* expbool OR expbool */

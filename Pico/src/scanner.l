@@ -63,6 +63,7 @@ until  { return (UNTIL); }
 end    { return (END); }
 true   { return (TRUE); }
 false  { return (FALSE); }
+print  { return (PRINTF); }
 
 [\n]   { ++lineno; }
 [ \t]+ { }
