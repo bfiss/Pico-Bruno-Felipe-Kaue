@@ -1,15 +1,15 @@
 Tutorial GIT:
 
- * criar usuário em http://repo.or.cz/
+ * criar usuário em http://github.com
  * se estiver no Windows, baixar e instalar git de http://code.google.com/p/msysgit/
- * git config --global user.name "username_no_repo"
+ * git config --global user.name "username_no_hub"
  * git config --global user.email you@yourdomain.example.com
- * git clone git://repo.or.cz/Pico-Bruno-Felipe-Kaue.git
+ * git clone git://github.com/bfiss/Pico-Bruno-Felipe-Kaue.git
  * cd Pico-Bruno-Felipe-Kaue
- * git remote add ORIGIN ssh://username_no_repo@repo.or.cz/srv/git/Pico-Bruno-Felipe-Kaue.git
+ * git remote add origin git@github.com:bfiss/Pico-Bruno-Felipe-Kaue.git
  * faça as modificações que quiser
  * git add .
- * git commit -a -m"breve descrição das suas modificações"
- * git push --all ORIGIN
- * link para o projeto: http://repo.or.cz/w/Pico-Bruno-Felipe-Kaue.git
+ * git commit -a -m "breve descrição das suas modificações"
+ * git push --all origin
+ * link para o projeto: https://bfiss@github.com/bfiss/Pico-Bruno-Felipe-Kaue.git
  
