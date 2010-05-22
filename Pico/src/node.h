@@ -7,6 +7,7 @@
 
 #include <stdio.h> 
 #include <stdarg.h>
+#include "lista.h"
 
 typedef int Node_type; /**< tipo do nó */
 
@@ -69,6 +70,13 @@ typedef int Node_type; /**< tipo do nó */
 /** número máximo de filhos de uma struct _node */
 #define MAX_CHILDREN_NUMBER 10
 
+struct attributes {
+	enum opType type;
+	int desloc;
+	int labelT;
+	int labelF;
+};
+
 /** Estrutura de dados parcial para o no da arvore.
  *  Trata-se de uma arvore generalizada: qualquer no pode ter de 0 ateh
  *  MAX_CHILDREN_NUMBER filhos. */
@@ -78,6 +86,7 @@ typedef struct _node {
    char* lexeme;   /**< irrelevante por enquanto. */
    Node_type type; /**< Um dos valores definidos acima pelos # defines. */
    void* attribute;/**< Qualquer coisa por enquanto. */
+   struct attributes att;
    /* Fim das informacoes armazenadas em cada no.
     * A seguir, completar essa estrutura de dados com o necessário para
     * a implementacao dos metodos especificados.

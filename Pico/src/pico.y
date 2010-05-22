@@ -53,7 +53,7 @@
 	int tmpSize = 0;
 	int increase_symbol_table();
 
-	struct node_tac * gera_tac(Node * node, int labV, int labF, int tmp);
+	struct node_tac * gera_tac(Node * node);
 
 %}
 
@@ -116,6 +116,7 @@ declaracoes: declaracao ';'	{ process_decl($1); $$ = $1; }
            ;
 
 declaracao: listadeclaracao ':' tipo	{ $$ = Create_node(lineno, decl_node, "declaracao", NULL, 2, $1, $3); }
+          ;
 
 listadeclaracao: IDF 				{ $$ = Create_node(lineno, decl_list_node, "listadeclaracao", NULL, 1, create_leaf(lineno, idf_node, $1, NULL)); }
                | IDF ',' listadeclaracao	{ $$ = Create_node(lineno, decl_list_node, "listadeclaracao", NULL, 2, create_leaf(lineno, idf_node, $1, NULL), $3); }
@@ -164,7 +165,7 @@ lvalue: IDF			{ CHECK_IDF($1); $$ = create_leaf(lineno, idf_node, $1, idf_aux); 
       | IDF '[' listaexpr ']'	{ CHECK_IDF($1); $$ = Create_node(lineno, lvalue_node, "Valor Indexado", NULL, 2, create_leaf(lineno, idf_node, $1, idf_aux), $3); }
       ;
 
-listaexpr: expr				
+listaexpr: expr				{ $$ = Create_node(lineno, lexpr_node, "expr_list", NULL, 1, $1); }
 	   | expr ',' listaexpr		{ $$ = Create_node(lineno, lexpr_node, "expr_list", NULL, 2, $1, $3); }
 	   ;
 
@@ -242,7 +243,7 @@ int main(int argc, char* argv[])
    if (!yyparse()) {
 		printf("OKAY\n");
 		stackSize = stackSize < desloc[0] ? desloc[0] : stackSize;
-		code = gera_tac(syntax_tree, 0, 0, 0);
+		code = gera_tac(syntax_tree);
 		fprintf(output,"%i\n%i\n",stackSize,tmpSize);
 		print_tac(output,code);
 		/*print_table(s_table[0]);
@@ -318,8 +319,11 @@ int type_size(Node * node) {
 	
 dimList * matrix_info(Node * node, int size) {
 	if( node->num_children == 2 )
-		return create_dimList(*((int*)(node->child[0]->attribute)), *((int*)(node->child[1]->attribute))+1, size, NULL);
-	return create_dimList(*((int*)(node->child[0]->attribute)), *((int*)(node->child[1]->attribute))+1, size, matrix_info(node->child[2],size));
+		return create_dimList(*((int*)(node->child[0]->attribute)),
+                       *((int*)(node->child[1]->attribute))+1, size, NULL);
+	return create_dimList(*((int*)(node->child[0]->attribute)),
+                            *((int*)(node->child[1]->attribute))+1,
+                           size, matrix_info(node->child[2],size));
 }
 
 int geraLabel() {
@@ -327,8 +331,184 @@ int geraLabel() {
     return x++;
 }
 
-struct node_tac * gera_tac(Node * node, int labV, int labF, int tmp) {
-	return 0;
+int tmpCount = 0;
+
+int geraTmp() {
+    tmpCount += 4;
+    return tmpCount;
+}
+
+dimList * current = NULL;
+
+struct node_tac * gera_tac(Node * node) {
+	if(!node)
+	    return NULL;
+	struct node_tac * a, * b;
+	Node * f, * s;
+	char op[2];
+	int lab[3];
+	switch(node->type) {
+	case program_node:
+	    return gera_tac(node->child[1]);
+	case bloc_node:
+	    a = gera_tac(node->child[0]);
+	    b = gera_tac(node->child[1]);
+	    cat_tac(&a,&b);
+	    return a;
+	case com_node:
+	    a = gera_tac(f=node->child[0]);
+	    b = gera_tac(s=node->child[1]);
+	    cat_tac(&a,&b);
+	    if( s->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
+	              s->att.labelF, geraTmp(), s->att.desloc, s->att.labelT, "("));
+		s->att.type = _TMP;
+		s->att.desloc = tmpCount;
+	    }
+	    if( f->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_LIDX, _VAR, s->att.type,
+	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
+	    } else {
+		append_inst_tac(&a, create_inst_tac(_ATR, _VAR, s->att.type,
+		f->att.type == _LIDX ? s->att.labelF : _EMPTY, f->att.desloc, s->att.desloc,
+					f->att.type == _LIDX ? s->att.labelT : 0, "\0\0"));
+	    }
+	    return a;
+	case idf_node:
+	    node->att.type = _VAR;
+	    node->att.desloc = ((entry_t *)(node->attribute))->desloc;
+	    return NULL;
+	case lvalue_node:
+	    a = gera_tac(f=node->child[0]);
+	    node->att.type = _COMPOUND;
+	    node->att.desloc = ((entry_t *)(f->attribute))->desloc;
+	    current = ((entry_t *)(f->attribute))->extra;
+	    b = gera_tac(s=node->child[1]);
+	    cat_tac(&a,&b);
+	    node->att.labelT = s->att.desloc;
+	    node->att.labelF = s->att.type;
+	    return a;
+	case lexpr_node:
+	    if( !current ) {
+		printf("Erro ao ler lista na linha %i.\n",f->num_line);
+		exit(-1);
+	    }
+	    a = gera_tac(f=node->child[0]);
+	    if( f->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
+	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
+		f->att.type = _TMP;
+		f->att.desloc = tmpCount;
+	    }
+	    append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
+	              _VAL, geraTmp(), f->att.desloc, current->proxTam, "*"));
+	    current = current->list;
+	    f->att.type = _TMP;
+	    f->att.desloc = tmpCount;
+	    if( f->num_children > 1 ) {
+		b = gera_tac(s=node->child[1]);
+		cat_tac(&a,&b);
+		append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
+	              s->att.type, geraTmp(), f->att.desloc, s->att.desloc, "+"));
+	    }
+	    node->att.type = _TMP;
+	    node->att.desloc = tmpCount;
+	    return a;
+	case int_node:
+	    node->att.type = _VAL;
+	    node->att.desloc = *((int *)(node->attribute));
+	    return NULL;
+	case float_node:
+	    node->att.type = _VAL;
+	    node->att.desloc = 0;
+	    return NULL;
+	case proc_node:
+	    node->att.type = _VAL;
+	    node->att.desloc = 0;
+	    return NULL;
+	case plus_node:
+	    op[0] = '+';
+	    goto expr_com;
+	case minus_node:
+	    op[0] = '-';
+	    goto expr_com;
+	case mult_node:
+	    op[0] = '*';
+	    goto expr_com;
+	case div_node:
+	    op[0] = '/';
+expr_com:
+	    a = gera_tac(f=node->child[0]);
+	    if( f->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
+	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
+		f->att.type = _TMP;
+		f->att.desloc = tmpCount;
+	    }
+	    b = gera_tac(s=node->child[1]);
+	    cat_tac(&a,&b);
+	    if( s->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
+	              s->att.labelF, geraTmp(), s->att.desloc, s->att.labelT, "("));
+		s->att.type = _TMP;
+		s->att.desloc = tmpCount;
+	    }
+	    append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
+	              s->att.type, geraTmp(), f->att.desloc, s->att.desloc, op));
+	    node->att.type = _TMP;
+	    node->att.desloc = tmpCount;
+	    return a;
+	case if_node:
+	    lab[0] = geraLabel();
+	    lab[1] = geraLabel();
+	    if( node->child[2] ) {
+		lab[2] = geraLabel();
+	    }
+	    node->child[0]->att.labelT = lab[0];
+	    node->child[0]->att.labelF = lab[1];
+	    a = gera_tac(f=node->child[0]);
+	    append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[0], 0, 0, "\0\0"));
+	    b = gera_tac(s=node->child[1]);
+	    cat_tac(&a,&b);
+	    if( node->child[2] ) {
+		append_inst_tac(&a, create_inst_tac(_GOTO, 0, 0, 0, lab[2], 0, 0, "\0\0"));
+	    }
+	    append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[1], 0, 0, "\0\0"));
+	    if( node->child[2] ) {
+		b = gera_tac(s=node->child[2]);
+		cat_tac(&a,&b);
+		append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[2], 0, 0, "\0\0"));
+	    }
+	    return a;
+	case while_node:
+	    lab[0] = geraLabel();
+	    lab[1] = geraLabel();
+	    lab[2] = geraLabel();
+	    node->child[0]->att.labelT = lab[1];
+	    node->child[0]->att.labelF = lab[2];
+	    a = NULL;
+	    append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[0], 0, 0, "\0\0"));
+	    b = gera_tac(f=node->child[0]);
+	    cat_tac(&a,&b);
+	    append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[1], 0, 0, "\0\0"));
+	    b = gera_tac(s=node->child[1]);
+	    cat_tac(&a,&b);
+	    append_inst_tac(&a, create_inst_tac(_GOTO, 0, 0, 0, lab[0], 0, 0, "\0\0"));
+	    append_inst_tac(&a, create_inst_tac(_LAB, 0, 0, 0, lab[2], 0, 0, "\0\0"));
+	    return a;
+	case print_node:
+	    a = gera_tac(f=node->child[0]);
+	    if( f->att.type == _COMPOUND ) {
+		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
+	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
+		f->att.type = _TMP;
+		f->att.desloc = tmpCount;
+	    }
+	    append_inst_tac(&a, create_inst_tac(_PRINT, f->att.type, 0, 0, f->att.desloc,
+                                                                          0, 0, "\0\0"));
+	    return a;
+	}
+	return NULL;
 }
 
 

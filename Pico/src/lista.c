@@ -46,7 +46,7 @@ void print_tac(FILE* out, struct node_tac * code) {
 
 void append_inst_tac(struct node_tac ** code_ref, struct tac * inst) {
 	struct node_tac *list = *code_ref;
-  if(!list) { // se a lista estiver vazia
+	if(!list) { // se a lista estiver vazia
 		*code_ref = (struct node_tac *) malloc(sizeof(struct node_tac));
 		assert(*code_ref);
 		list = *code_ref;
