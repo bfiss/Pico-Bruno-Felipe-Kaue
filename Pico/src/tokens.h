@@ -107,7 +107,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 61 "pico.y"
+#line 64 "pico.y"
 
 	char *string;
 	int number_int;

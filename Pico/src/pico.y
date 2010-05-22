@@ -23,6 +23,9 @@
 		return( UNDEFINED_SYMBOL_ERROR ); \
 	}
 
+#define CLEAN_TMP tmpSize < tmpCount ? (tmpSize = tmpCount) : 0; \
+	          tmpCount = 0
+
 	int yylex(void);
 	void yyerror(char *);
 
@@ -245,7 +248,7 @@ int main(int argc, char* argv[])
 		printf("OKAY\n");
 		stackSize = stackSize < desloc[0] ? desloc[0] : stackSize;
 		code = gera_tac(syntax_tree);
-		tmpSize = tmpCount;
+		CLEAN_TMP;
 		fprintf(output,"%i\n%i\n",stackSize,tmpSize);
 		print_tac(output,code);
 		/*print_table(s_table[0]);
@@ -335,7 +338,7 @@ int geraLabel() {
 
 int geraTmp() {
     tmpCount += 4;
-    return tmpCount;
+    return tmpCount-4;
 }
 
 dimList * current = NULL;
@@ -352,6 +355,7 @@ struct node_tac * gera_tac(Node * node) {
 	    return gera_tac(node->child[1]);
 	case bloc_node:
 	    a = gera_tac(node->child[0]);
+	    CLEAN_TMP;
 	    b = gera_tac(node->child[1]);
 	    cat_tac(&a,&b);
 	    return a;
@@ -363,11 +367,11 @@ struct node_tac * gera_tac(Node * node) {
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              s->att.labelF, geraTmp(), s->att.desloc, s->att.labelT, "("));
 		s->att.type = _TMP;
-		s->att.desloc = tmpCount;
+		s->att.desloc = tmpCount-4;
 	    }
 	    if( f->att.type == _COMPOUND ) {
-		append_inst_tac(&a, create_inst_tac(_LIDX, _VAR, f->att.type,
-	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
+		append_inst_tac(&a, create_inst_tac(_LIDX, _VAR, s->att.type,
+	              f->att.labelF, f->att.desloc, s->att.desloc, f->att.labelT, "("));
 	    } else {
 		append_inst_tac(&a, create_inst_tac(_ATR, _VAR, s->att.type,
 		_EMPTY, f->att.desloc, s->att.desloc, 0, "\0\0"));
@@ -392,7 +396,7 @@ struct node_tac * gera_tac(Node * node) {
 	    return a;
 	case lexpr_node:
 	    if( !current ) {
-		printf("Erro ao ler lista na linha %i.\n",f->num_line);
+		printf("Erro ao ler lista de expressoes na linha %i.\n",node->num_line);
 		exit(-1);
 	    }
 	    a = gera_tac(f=node->child[0]);
@@ -400,21 +404,21 @@ struct node_tac * gera_tac(Node * node) {
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
 		f->att.type = _TMP;
-		f->att.desloc = tmpCount;
+		f->att.desloc = tmpCount-4;
 	    }
 	    append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
 	              _VAL, geraTmp(), f->att.desloc, current->proxTam, "*"));
 	    current = current->list;
 	    f->att.type = _TMP;
-	    f->att.desloc = tmpCount;
-	    if( f->num_children > 1 ) {
+	    f->att.desloc = tmpCount-4;
+	    if( node->num_children > 1 ) {
 		b = gera_tac(s=node->child[1]);
 		cat_tac(&a,&b);
 		append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
 	              s->att.type, geraTmp(), f->att.desloc, s->att.desloc, "+"));
 	    }
 	    node->att.type = _TMP;
-	    node->att.desloc = tmpCount;
+	    node->att.desloc = tmpCount-4;
 	    return a;
 	case int_node:
 	    node->att.type = _VAL;
@@ -449,7 +453,7 @@ expr_com:
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
 		f->att.type = _TMP;
-		f->att.desloc = tmpCount;
+		f->att.desloc = tmpCount-4;
 	    }
 	    b = gera_tac(s=node->child[1]);
 	    cat_tac(&a,&b);
@@ -457,12 +461,12 @@ expr_com:
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              s->att.labelF, geraTmp(), s->att.desloc, s->att.labelT, "("));
 		s->att.type = _TMP;
-		s->att.desloc = tmpCount;
+		s->att.desloc = tmpCount-4;
 	    }
 	    append_inst_tac(&a, create_inst_tac(_ATR, _TMP, f->att.type,
 	              s->att.type, geraTmp(), f->att.desloc, s->att.desloc, op));
 	    node->att.type = _TMP;
-	    node->att.desloc = tmpCount;
+	    node->att.desloc = tmpCount-4;
 	    return a;
 	case if_node:
 	    lab[0] = geraLabel();
@@ -508,7 +512,7 @@ expr_com:
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
 		f->att.type = _TMP;
-		f->att.desloc = tmpCount;
+		f->att.desloc = tmpCount-4;
 	    }
 	    append_inst_tac(&a, create_inst_tac(_PRINT, f->att.type, 0, 0, f->att.desloc,
                                                                           0, 0, "\0\0"));
@@ -524,7 +528,7 @@ expr_com:
 	case not_node:
 	    node->child[0]->att.labelT = node->att.labelF;
 	    node->child[0]->att.labelF = node->att.labelT;
-	    return NULL;
+	    return gera_tac(node->child[0]);
 	case eq_node:
 	    op[0] = '=';
 	    op[1] = '=';
@@ -558,7 +562,7 @@ bool_com:
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              f->att.labelF, geraTmp(), f->att.desloc, f->att.labelT, "("));
 		f->att.type = _TMP;
-		f->att.desloc = tmpCount;
+		f->att.desloc = tmpCount-4;
 	    }
 	    b = gera_tac(s=node->child[1]);
 	    cat_tac(&a,&b);
@@ -566,7 +570,7 @@ bool_com:
 		append_inst_tac(&a, create_inst_tac(_RIDX, _TMP, _VAR,
 	              s->att.labelF, geraTmp(), s->att.desloc, s->att.labelT, "("));
 		s->att.type = _TMP;
-		s->att.desloc = tmpCount;
+		s->att.desloc = tmpCount-4;
 	    }
 	    append_inst_tac(&a, create_inst_tac(_IF, f->att.type, s->att.type, 0,
                              f->att.desloc, s->att.desloc, node->att.labelT, op));

@@ -34,7 +34,7 @@ void print_inst_tac(FILE* out, struct tac i) {
     switch (i.type) {
     case _LAB:
 	--line;
-	fprintf(out,"Label_%5i:\n",i.arg1);
+	fprintf(out,"L_%03i:\n",i.arg1);
 	break;
     case _IF:
 	fprintf(out,"%03i:   IF ",line);
@@ -47,11 +47,11 @@ void print_inst_tac(FILE* out, struct tac i) {
 	    fprintf(out,"%i ",i.arg2);
 	else
 	    fprintf(out,"%03i(%s) ",i.arg2,i.tArg2==_VAR?"SP":"Rx");
-	fprintf(out,"GOTO Label_%5i:\n",i.arg3);
+	fprintf(out,"GOTO L_%03i\n",i.arg3);
 	break;
     case _GOTO:
 	fprintf(out,"%03i:   ",line);
-	fprintf(out,"GOTO Label_%5i:\n",i.arg1);
+	fprintf(out,"GOTO L_%03i\n",i.arg1);
 	break;
     case _PRINT:
 	fprintf(out,"%03i:   PRINT ",line);
