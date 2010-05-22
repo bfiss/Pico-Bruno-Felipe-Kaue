@@ -89,7 +89,7 @@
 %token NEXT
 %token REPEAT
 %token UNTIL
-%token PRINT
+%token PRINTF
 
 %start code
 %left OR
@@ -164,11 +164,11 @@ listaexpr: expr
 	   ;
 
 expr: expr '+' expr	{ $$ = Create_node(lineno, plus_node, "+", NULL, 2, $1, $3); }  
-    | expr '-' expr  { $$ = Create_node(lineno, minus_node, "-", NULL, 2, $1, $3); }  
-    | expr '*' expr  { $$ = Create_node(lineno, mult_node, "*", NULL, 2, $1, $3); }  
-    | expr '/' expr  { $$ = Create_node(lineno, div_node, "/", NULL, 2, $1, $3); }  
+    | expr '-' expr     { $$ = Create_node(lineno, minus_node, "-", NULL, 2, $1, $3); }  
+    | expr '*' expr     { $$ = Create_node(lineno, mult_node, "*", NULL, 2, $1, $3); }  
+    | expr '/' expr     { $$ = Create_node(lineno, div_node, "/", NULL, 2, $1, $3); }  
     | '(' expr ')'	{ $$ = $2; }
-    | INT_LIT   		{ $$ = create_int($1); }
+    | INT_LIT   	{ $$ = create_int($1); }
     | F_LIT    		{ $$ = create_float($1); }
     | lvalue
     | chamaproc
@@ -178,9 +178,9 @@ chamaproc: IDF '(' listaexpr ')' { CHECK_IDF($1); $$ = Create_node(lineno, proc_
          ;
 
 enunciado: expr
-         | IF '(' expbool ')' THEN acoes fiminstcontrole		{ $$ = Create_node(lineno, if_node, "IF", NULL, 3, $3, $6, $7); }
-         | WHILE '(' expbool ')' '{' acoes '}'					{ $$ = Create_node(lineno, while_node, "WHILE", NULL, 2, $3, $6); }
-		 | PRINTF ( exp )										{ $$ = Create_node(lineno, print_node, "PRINT", NULL, 1, $3); }
+         | IF '(' expbool ')' THEN acoes fiminstcontrole	{ $$ = Create_node(lineno, if_node, "IF", NULL, 3, $3, $6, $7); }
+         | WHILE '(' expbool ')' '{' acoes '}'			{ $$ = Create_node(lineno, while_node, "WHILE", NULL, 2, $3, $6); }
+	 | PRINTF '(' expr ')'					{ $$ = Create_node(lineno, print_node, "PRINT", NULL, 1, $3); }
          ;
 
 fiminstcontrole: END 			{ $$ = NULL; }
