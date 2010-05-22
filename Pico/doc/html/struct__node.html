@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Pico: Referência da Estrutura _node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li><a href="functions.html"><span>Campos&nbsp;de&nbsp;Dados</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência da Estrutura _node</h1><!-- doxytag: class="_node" -->
+<p><code>#include &lt;<a class="el" href="node_8h_source.html">node.h</a>&gt;</code></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Campos de Dados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#ad9586487581d158778b8ec89f2fb321d">num_line</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#ab39ddc82d829722815b9bbd71ce4bd8d">id</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#ad88ded3f26dc3e6469372e4740cefba7">lexeme</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="node_8h.html#af78666e6cb576ec864360f78107a356a">Node_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#a7d8402191946be24896b7517484c2d0b">type</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#a8635514c1a76f9660692563ea9bb8ef1">attribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#a5f1c09c3697d9a06e1e530441aac18bc">num_children</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__node.html">_node</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__node.html#aa1e3d575ec8721f5c4924c8b83163acc">child</a> [MAX_CHILDREN_NUMBER]</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Estrutura de dados parcial para o no da arvore. Trata-se de uma arvore generalizada: qualquer no pode ter de 0 ateh MAX_CHILDREN_NUMBER filhos. </p>
+<hr/><h2>Campos e Atributos</h2>
+<a class="anchor" id="a8635514c1a76f9660692563ea9bb8ef1"></a><!-- doxytag: member="_node::attribute" ref="a8635514c1a76f9660692563ea9bb8ef1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* <a class="el" href="struct__node.html#a8635514c1a76f9660692563ea9bb8ef1">_node::attribute</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Qualquer coisa por enquanto. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa1e3d575ec8721f5c4924c8b83163acc"></a><!-- doxytag: member="_node::child" ref="aa1e3d575ec8721f5c4924c8b83163acc" args="[MAX_CHILDREN_NUMBER]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct__node.html">_node</a>* <a class="el" href="struct__node.html#aa1e3d575ec8721f5c4924c8b83163acc">_node::child</a>[MAX_CHILDREN_NUMBER]<code> [read]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Vetor de ponteiros para os filhos dos nodos. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab39ddc82d829722815b9bbd71ce4bd8d"></a><!-- doxytag: member="_node::id" ref="ab39ddc82d829722815b9bbd71ce4bd8d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct__node.html#ab39ddc82d829722815b9bbd71ce4bd8d">_node::id</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>rótulo do nó. Cada no deve ter um 'id' distinto. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad88ded3f26dc3e6469372e4740cefba7"></a><!-- doxytag: member="_node::lexeme" ref="ad88ded3f26dc3e6469372e4740cefba7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="struct__node.html#ad88ded3f26dc3e6469372e4740cefba7">_node::lexeme</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>irrelevante por enquanto. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5f1c09c3697d9a06e1e530441aac18bc"></a><!-- doxytag: member="_node::num_children" ref="a5f1c09c3697d9a06e1e530441aac18bc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct__node.html#a5f1c09c3697d9a06e1e530441aac18bc">_node::num_children</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Numero de filhos do nodo. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9586487581d158778b8ec89f2fb321d"></a><!-- doxytag: member="_node::num_line" ref="ad9586487581d158778b8ec89f2fb321d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct__node.html#ad9586487581d158778b8ec89f2fb321d">_node::num_line</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>numero de linha (irrelevante por enquanto). </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d8402191946be24896b7517484c2d0b"></a><!-- doxytag: member="_node::type" ref="a7d8402191946be24896b7517484c2d0b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="node_8h.html#af78666e6cb576ec864360f78107a356a">Node_type</a> <a class="el" href="struct__node.html#a7d8402191946be24896b7517484c2d0b">_node::type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Um dos valores definidos acima pelos # defines. </p>
+
+</div>
+</div>
+<hr/>A documentação para esta estrutura foi gerada a partir do seguinte arquivo:<ul>
+<li><a class="el" href="node_8h_source.html">node.h</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Gerado em Mon Apr 12 21:14:31 2010 para Pico por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

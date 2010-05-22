@@ -1,0 +1,226 @@
+\hypertarget{avl_8h}{
+\section{Referência do Arquivo avl.h}
+\label{avl_8h}\index{avl.h@{avl.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}entry.h\char`\"{}}\par
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhash__entry__t}{hash\_\-entry\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structhash__entry__t}{hash\_\-entry\_\-t} $\ast$ \hyperlink{avl_8h_ae94f03ff0a1304b49e2535a071ac8118}{pNodoA}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a8c2f63153848a6f9371ae494f0d2bcd7}{inicializaAVL} ()
+\begin{DoxyCompactList}\small\item\em Inicializar a arvore AVL. \item\end{DoxyCompactList}\item 
+void \hyperlink{avl_8h_aa67ab32aa33e417c0033a102c588551d}{destroiAVL} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Destroi a arvore, desalocando memoria ocupada por ela. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_ac55558757991ca7e4d8cebd13e47c8dd}{insereAVL} (\hyperlink{structhash__entry__t}{pNodoA} arv, \hyperlink{structentry__t}{entry\_\-t} $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Inserve elemento na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a0c7ae465513e346995a95ae8b0b24cd3}{findNodo} (\hyperlink{structhash__entry__t}{pNodoA} arv, char $\ast$name, int $\ast$find)
+\begin{DoxyCompactList}\small\item\em Encontra um elemento na arvore. \item\end{DoxyCompactList}\item 
+void \hyperlink{avl_8h_ae6f8bedca22b5dab2e308eb03197e0fe}{imprimeAVL} (FILE $\ast$out, \hyperlink{structhash__entry__t}{pNodoA} arv, int $\ast$n\_\-nodo)
+\begin{DoxyCompactList}\small\item\em Imprime a arvore em ordem crescente de ordenamento. \item\end{DoxyCompactList}\item 
+void \hyperlink{avl_8h_ac61a056a6faa1fab3cb77d91c1a12bb1}{printNiveis} (\hyperlink{structhash__entry__t}{pNodoA} arv, int count)
+\begin{DoxyCompactList}\small\item\em Imprime a arvore com saida formatada em camadas. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a9bc64bd85e26be5be8bc090849597a67}{rotEsquerda} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada rotacao a esquerda na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a0df8a40c104d382ca80edbede7d61261}{rotDireita} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada rotacao a direita na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_ad2e82e163c9735288cdbb28b7c5c3b24}{rotDupEsquerda} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada rotacao dupla a esquerda na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_aa04d998e692b18383b1feb68332903eb}{rotDupDireita} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada rotacao dupla a direita na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a825c739b99148a3ed276e5fb8882bcce}{balanceamentoEsq} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada balanceamento a esquerda na arvore. \item\end{DoxyCompactList}\item 
+\hyperlink{structhash__entry__t}{pNodoA} \hyperlink{avl_8h_a2d8f3fc22c261ac85fc208d8261565e1}{balanceamentoDir} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Realizada balanceamento a direita na arvore. \item\end{DoxyCompactList}\item 
+int \hyperlink{avl_8h_a705e84d93f3a374d679acca074dc0397}{NodoVazio} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Testa de o nodo é vazio. \item\end{DoxyCompactList}\item 
+int \hyperlink{avl_8h_a45d54530b97bb8927768cb7fc621206f}{altura} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Calcula a altura da arvore. \item\end{DoxyCompactList}\item 
+int \hyperlink{avl_8h_af13e526f7aae6efac8f94e0d3e390ded}{calculaFatorB} (\hyperlink{structhash__entry__t}{pNodoA} arv)
+\begin{DoxyCompactList}\small\item\em Calcula o fator de balanceamento da arvore. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\begin{DoxyVersion}{Versão}
+1.1 
+\end{DoxyVersion}
+
+
+\subsection{Definições dos tipos}
+\hypertarget{avl_8h_ae94f03ff0a1304b49e2535a071ac8118}{
+\index{avl.h@{avl.h}!pNodoA@{pNodoA}}
+\index{pNodoA@{pNodoA}!avl.h@{avl.h}}
+\subsubsection[{pNodoA}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf hash\_\-entry\_\-t}
+ $\ast$ {\bf pNodoA}}}
+\label{avl_8h_ae94f03ff0a1304b49e2535a071ac8118}
+ponteiro para um nó 
+
+\subsection{Funções}
+\hypertarget{avl_8h_a45d54530b97bb8927768cb7fc621206f}{
+\index{avl.h@{avl.h}!altura@{altura}}
+\index{altura@{altura}!avl.h@{avl.h}}
+\subsubsection[{altura}]{\setlength{\rightskip}{0pt plus 5cm}int altura ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a45d54530b97bb8927768cb7fc621206f}
+
+
+Calcula a altura da arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da árvore \end{DoxyParams}
+\hypertarget{avl_8h_a2d8f3fc22c261ac85fc208d8261565e1}{
+\index{avl.h@{avl.h}!balanceamentoDir@{balanceamentoDir}}
+\index{balanceamentoDir@{balanceamentoDir}!avl.h@{avl.h}}
+\subsubsection[{balanceamentoDir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} balanceamentoDir ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a2d8f3fc22c261ac85fc208d8261565e1}
+
+
+Realizada balanceamento a direita na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}
+\hypertarget{avl_8h_a825c739b99148a3ed276e5fb8882bcce}{
+\index{avl.h@{avl.h}!balanceamentoEsq@{balanceamentoEsq}}
+\index{balanceamentoEsq@{balanceamentoEsq}!avl.h@{avl.h}}
+\subsubsection[{balanceamentoEsq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} balanceamentoEsq ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a825c739b99148a3ed276e5fb8882bcce}
+
+
+Realizada balanceamento a esquerda na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}
+\hypertarget{avl_8h_af13e526f7aae6efac8f94e0d3e390ded}{
+\index{avl.h@{avl.h}!calculaFatorB@{calculaFatorB}}
+\index{calculaFatorB@{calculaFatorB}!avl.h@{avl.h}}
+\subsubsection[{calculaFatorB}]{\setlength{\rightskip}{0pt plus 5cm}int calculaFatorB ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_af13e526f7aae6efac8f94e0d3e390ded}
+
+
+Calcula o fator de balanceamento da arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da árvore \end{DoxyParams}
+\hypertarget{avl_8h_aa67ab32aa33e417c0033a102c588551d}{
+\index{avl.h@{avl.h}!destroiAVL@{destroiAVL}}
+\index{destroiAVL@{destroiAVL}!avl.h@{avl.h}}
+\subsubsection[{destroiAVL}]{\setlength{\rightskip}{0pt plus 5cm}void destroiAVL ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_aa67ab32aa33e417c0033a102c588551d}
+
+
+Destroi a arvore, desalocando memoria ocupada por ela. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore a ser destruida. \end{DoxyParams}
+\hypertarget{avl_8h_a0c7ae465513e346995a95ae8b0b24cd3}{
+\index{avl.h@{avl.h}!findNodo@{findNodo}}
+\index{findNodo@{findNodo}!avl.h@{avl.h}}
+\subsubsection[{findNodo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} findNodo ({\bf pNodoA} {\em arv}, \/  char $\ast$ {\em name}, \/  int $\ast$ {\em find})}}
+\label{avl_8h_a0c7ae465513e346995a95ae8b0b24cd3}
+
+
+Encontra um elemento na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \item[{\em name}]nome do elemento a ser pesquisado. \item[{\em find}]endereco de um inteiro que armazena se o elemento foi encontrado (1 encontrado, 0 nao). \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+ponteiro para o nodo da arvore que contem o elemento pesquisado. 
+\end{DoxyReturn}
+\hypertarget{avl_8h_ae6f8bedca22b5dab2e308eb03197e0fe}{
+\index{avl.h@{avl.h}!imprimeAVL@{imprimeAVL}}
+\index{imprimeAVL@{imprimeAVL}!avl.h@{avl.h}}
+\subsubsection[{imprimeAVL}]{\setlength{\rightskip}{0pt plus 5cm}void imprimeAVL (FILE $\ast$ {\em out}, \/  {\bf pNodoA} {\em arv}, \/  int $\ast$ {\em n\_\-nodo})}}
+\label{avl_8h_ae6f8bedca22b5dab2e308eb03197e0fe}
+
+
+Imprime a arvore em ordem crescente de ordenamento. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em out}]saida para imprimir a arvore. \item[{\em arv}]raiz da arvore. \item[{\em n\_\-nodo}]endereco de um contador do numero de nodos. \end{DoxyParams}
+\hypertarget{avl_8h_a8c2f63153848a6f9371ae494f0d2bcd7}{
+\index{avl.h@{avl.h}!inicializaAVL@{inicializaAVL}}
+\index{inicializaAVL@{inicializaAVL}!avl.h@{avl.h}}
+\subsubsection[{inicializaAVL}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} inicializaAVL ()}}
+\label{avl_8h_a8c2f63153848a6f9371ae494f0d2bcd7}
+
+
+Inicializar a arvore AVL. \begin{DoxyReturn}{Retorna}
+ponteiro para a raiz da arvore. 
+\end{DoxyReturn}
+\hypertarget{avl_8h_ac55558757991ca7e4d8cebd13e47c8dd}{
+\index{avl.h@{avl.h}!insereAVL@{insereAVL}}
+\index{insereAVL@{insereAVL}!avl.h@{avl.h}}
+\subsubsection[{insereAVL}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} insereAVL ({\bf pNodoA} {\em arv}, \/  {\bf entry\_\-t} $\ast$ {\em symbol})}}
+\label{avl_8h_ac55558757991ca7e4d8cebd13e47c8dd}
+
+
+Inserve elemento na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \item[{\em symbol}]entrada a ser inserida. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+ponteiro para a raiz da arvore. 
+\end{DoxyReturn}
+\hypertarget{avl_8h_a705e84d93f3a374d679acca074dc0397}{
+\index{avl.h@{avl.h}!NodoVazio@{NodoVazio}}
+\index{NodoVazio@{NodoVazio}!avl.h@{avl.h}}
+\subsubsection[{NodoVazio}]{\setlength{\rightskip}{0pt plus 5cm}int NodoVazio ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a705e84d93f3a374d679acca074dc0397}
+
+
+Testa de o nodo é vazio. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]nó a ser testado \end{DoxyParams}
+\hypertarget{avl_8h_ac61a056a6faa1fab3cb77d91c1a12bb1}{
+\index{avl.h@{avl.h}!printNiveis@{printNiveis}}
+\index{printNiveis@{printNiveis}!avl.h@{avl.h}}
+\subsubsection[{printNiveis}]{\setlength{\rightskip}{0pt plus 5cm}void printNiveis ({\bf pNodoA} {\em arv}, \/  int {\em count})}}
+\label{avl_8h_ac61a056a6faa1fab3cb77d91c1a12bb1}
+
+
+Imprime a arvore com saida formatada em camadas. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \item[{\em count}]valor da camada inicial. \end{DoxyParams}
+\hypertarget{avl_8h_a0df8a40c104d382ca80edbede7d61261}{
+\index{avl.h@{avl.h}!rotDireita@{rotDireita}}
+\index{rotDireita@{rotDireita}!avl.h@{avl.h}}
+\subsubsection[{rotDireita}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} rotDireita ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a0df8a40c104d382ca80edbede7d61261}
+
+
+Realizada rotacao a direita na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}
+\hypertarget{avl_8h_aa04d998e692b18383b1feb68332903eb}{
+\index{avl.h@{avl.h}!rotDupDireita@{rotDupDireita}}
+\index{rotDupDireita@{rotDupDireita}!avl.h@{avl.h}}
+\subsubsection[{rotDupDireita}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} rotDupDireita ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_aa04d998e692b18383b1feb68332903eb}
+
+
+Realizada rotacao dupla a direita na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}
+\hypertarget{avl_8h_ad2e82e163c9735288cdbb28b7c5c3b24}{
+\index{avl.h@{avl.h}!rotDupEsquerda@{rotDupEsquerda}}
+\index{rotDupEsquerda@{rotDupEsquerda}!avl.h@{avl.h}}
+\subsubsection[{rotDupEsquerda}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} rotDupEsquerda ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_ad2e82e163c9735288cdbb28b7c5c3b24}
+
+
+Realizada rotacao dupla a esquerda na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}
+\hypertarget{avl_8h_a9bc64bd85e26be5be8bc090849597a67}{
+\index{avl.h@{avl.h}!rotEsquerda@{rotEsquerda}}
+\index{rotEsquerda@{rotEsquerda}!avl.h@{avl.h}}
+\subsubsection[{rotEsquerda}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pNodoA} rotEsquerda ({\bf pNodoA} {\em arv})}}
+\label{avl_8h_a9bc64bd85e26be5be8bc090849597a67}
+
+
+Realizada rotacao a esquerda na arvore. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em arv}]raiz da arvore. \end{DoxyParams}

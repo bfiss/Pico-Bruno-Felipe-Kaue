@@ -1,0 +1,10 @@
+a : int;
+b: float;
+c : int; b : float;
+d, e, f, g: int;
+d, e, f, g: double;
+d, e, f, g: char;
+
+d, e, f, g: char[2:10, 3:40, 5:50];
+
+a = b;

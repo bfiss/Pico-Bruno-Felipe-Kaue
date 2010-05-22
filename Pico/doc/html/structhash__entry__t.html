@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Pico: Referência da Estrutura hash_entry_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li><a href="functions.html"><span>Campos&nbsp;de&nbsp;Dados</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência da Estrutura hash_entry_t</h1><!-- doxytag: class="hash_entry_t" -->
+<p><code>#include &lt;<a class="el" href="avl_8h_source.html">avl.h</a>&gt;</code></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Campos de Dados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structentry__t.html">entry_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__entry__t.html#a37f08e45bf32b96b07d7db8550e4df1b">entry</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__entry__t.html#aae1502e17b7bf9898325996b0e40259c">dir</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__entry__t.html#ac3b05345e41365209c1eb12fee3f5d70">esq</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__entry__t.html#a4537a128188ab740031d11b94dbed5d0">fatorB</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Entrada na tabela de hash Trata-se de uma AVL </p>
+<hr/><h2>Campos e Atributos</h2>
+<a class="anchor" id="aae1502e17b7bf9898325996b0e40259c"></a><!-- doxytag: member="hash_entry_t::dir" ref="aae1502e17b7bf9898325996b0e40259c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a>* <a class="el" href="structhash__entry__t.html#aae1502e17b7bf9898325996b0e40259c">hash_entry_t::dir</a><code> [read]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>filho à direita do nó </p>
+
+</div>
+</div>
+<a class="anchor" id="a37f08e45bf32b96b07d7db8550e4df1b"></a><!-- doxytag: member="hash_entry_t::entry" ref="a37f08e45bf32b96b07d7db8550e4df1b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structentry__t.html">entry_t</a>* <a class="el" href="structhash__entry__t.html#a37f08e45bf32b96b07d7db8550e4df1b">hash_entry_t::entry</a><code> [read]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>conteúdo do nó </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3b05345e41365209c1eb12fee3f5d70"></a><!-- doxytag: member="hash_entry_t::esq" ref="ac3b05345e41365209c1eb12fee3f5d70" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a> * <a class="el" href="structhash__entry__t.html#ac3b05345e41365209c1eb12fee3f5d70">hash_entry_t::esq</a><code> [read]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>filho à esquerda do nó </p>
+
+</div>
+</div>
+<a class="anchor" id="a4537a128188ab740031d11b94dbed5d0"></a><!-- doxytag: member="hash_entry_t::fatorB" ref="a4537a128188ab740031d11b94dbed5d0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="structhash__entry__t.html#a4537a128188ab740031d11b94dbed5d0">hash_entry_t::fatorB</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>fator de balanceamento do nó </p>
+
+</div>
+</div>
+<hr/>A documentação para esta estrutura foi gerada a partir do seguinte arquivo:<ul>
+<li><a class="el" href="avl_8h_source.html">avl.h</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Gerado em Mon Apr 12 21:14:31 2010 para Pico por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

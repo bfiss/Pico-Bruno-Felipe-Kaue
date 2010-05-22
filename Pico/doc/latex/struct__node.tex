@@ -1,0 +1,69 @@
+\hypertarget{struct__node}{
+\section{Referência da Estrutura \_\-node}
+\label{struct__node}\index{\_\-node@{\_\-node}}
+}
+
+
+{\ttfamily \#include $<$node.h$>$}\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct__node_ad9586487581d158778b8ec89f2fb321d}{num\_\-line}
+\item 
+int \hyperlink{struct__node_ab39ddc82d829722815b9bbd71ce4bd8d}{id}
+\item 
+char $\ast$ \hyperlink{struct__node_ad88ded3f26dc3e6469372e4740cefba7}{lexeme}
+\item 
+\hyperlink{node_8h_af78666e6cb576ec864360f78107a356a}{Node\_\-type} \hyperlink{struct__node_a7d8402191946be24896b7517484c2d0b}{type}
+\item 
+void $\ast$ \hyperlink{struct__node_a8635514c1a76f9660692563ea9bb8ef1}{attribute}
+\item 
+int \hyperlink{struct__node_a5f1c09c3697d9a06e1e530441aac18bc}{num\_\-children}
+\item 
+struct \hyperlink{struct__node}{\_\-node} $\ast$ \hyperlink{struct__node_aa1e3d575ec8721f5c4924c8b83163acc}{child} \mbox{[}MAX\_\-CHILDREN\_\-NUMBER\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura de dados parcial para o no da arvore. Trata-\/se de uma arvore generalizada: qualquer no pode ter de 0 ateh MAX\_\-CHILDREN\_\-NUMBER filhos. 
+
+\subsection{Campos e Atributos}
+\hypertarget{struct__node_a8635514c1a76f9660692563ea9bb8ef1}{
+\index{\_\-node@{\_\-node}!attribute@{attribute}}
+\index{attribute@{attribute}!_node@{\_\-node}}
+\subsubsection[{attribute}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf \_\-node::attribute}}}
+\label{struct__node_a8635514c1a76f9660692563ea9bb8ef1}
+Qualquer coisa por enquanto. \hypertarget{struct__node_aa1e3d575ec8721f5c4924c8b83163acc}{
+\index{\_\-node@{\_\-node}!child@{child}}
+\index{child@{child}!_node@{\_\-node}}
+\subsubsection[{child}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \_\-node}$\ast$ {\bf \_\-node::child}\mbox{[}MAX\_\-CHILDREN\_\-NUMBER\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}
+\label{struct__node_aa1e3d575ec8721f5c4924c8b83163acc}
+Vetor de ponteiros para os filhos dos nodos. \hypertarget{struct__node_ab39ddc82d829722815b9bbd71ce4bd8d}{
+\index{\_\-node@{\_\-node}!id@{id}}
+\index{id@{id}!_node@{\_\-node}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-node::id}}}
+\label{struct__node_ab39ddc82d829722815b9bbd71ce4bd8d}
+rótulo do nó. Cada no deve ter um 'id' distinto. \hypertarget{struct__node_ad88ded3f26dc3e6469372e4740cefba7}{
+\index{\_\-node@{\_\-node}!lexeme@{lexeme}}
+\index{lexeme@{lexeme}!_node@{\_\-node}}
+\subsubsection[{lexeme}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-node::lexeme}}}
+\label{struct__node_ad88ded3f26dc3e6469372e4740cefba7}
+irrelevante por enquanto. \hypertarget{struct__node_a5f1c09c3697d9a06e1e530441aac18bc}{
+\index{\_\-node@{\_\-node}!num\_\-children@{num\_\-children}}
+\index{num\_\-children@{num\_\-children}!_node@{\_\-node}}
+\subsubsection[{num\_\-children}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-node::num\_\-children}}}
+\label{struct__node_a5f1c09c3697d9a06e1e530441aac18bc}
+Numero de filhos do nodo. \hypertarget{struct__node_ad9586487581d158778b8ec89f2fb321d}{
+\index{\_\-node@{\_\-node}!num\_\-line@{num\_\-line}}
+\index{num\_\-line@{num\_\-line}!_node@{\_\-node}}
+\subsubsection[{num\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \_\-node::num\_\-line}}}
+\label{struct__node_ad9586487581d158778b8ec89f2fb321d}
+numero de linha (irrelevante por enquanto). \hypertarget{struct__node_a7d8402191946be24896b7517484c2d0b}{
+\index{\_\-node@{\_\-node}!type@{type}}
+\index{type@{type}!_node@{\_\-node}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\_\-type} {\bf \_\-node::type}}}
+\label{struct__node_a7d8402191946be24896b7517484c2d0b}
+Um dos valores definidos acima pelos \# defines. 
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node_8h}{node.h}\end{DoxyCompactItemize}

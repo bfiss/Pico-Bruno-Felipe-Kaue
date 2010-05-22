@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Pico: Referência do Arquivo avl.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&nbsp;de&nbsp;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência do Arquivo avl.h</h1><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;unistd.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="entry_8h_source.html">entry.h</a>&quot;</code><br/>
+
+<p><a href="avl_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Estruturas de Dados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhash__entry__t.html">hash_entry_t</a></td></tr>
+<tr><td colspan="2"><h2>Definições de Tipos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#ae94f03ff0a1304b49e2535a071ac8118">pNodoA</a></td></tr>
+<tr><td colspan="2"><h2>Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a8c2f63153848a6f9371ae494f0d2bcd7">inicializaAVL</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicializar a arvore AVL.  <a href="#a8c2f63153848a6f9371ae494f0d2bcd7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#aa67ab32aa33e417c0033a102c588551d">destroiAVL</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroi a arvore, desalocando memoria ocupada por ela.  <a href="#aa67ab32aa33e417c0033a102c588551d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#ac55558757991ca7e4d8cebd13e47c8dd">insereAVL</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv, <a class="el" href="structentry__t.html">entry_t</a> *symbol)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inserve elemento na arvore.  <a href="#ac55558757991ca7e4d8cebd13e47c8dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a0c7ae465513e346995a95ae8b0b24cd3">findNodo</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv, char *name, int *find)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Encontra um elemento na arvore.  <a href="#a0c7ae465513e346995a95ae8b0b24cd3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#ae6f8bedca22b5dab2e308eb03197e0fe">imprimeAVL</a> (FILE *out, <a class="el" href="structhash__entry__t.html">pNodoA</a> arv, int *n_nodo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Imprime a arvore em ordem crescente de ordenamento.  <a href="#ae6f8bedca22b5dab2e308eb03197e0fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#ac61a056a6faa1fab3cb77d91c1a12bb1">printNiveis</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv, int count)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Imprime a arvore com saida formatada em camadas.  <a href="#ac61a056a6faa1fab3cb77d91c1a12bb1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a9bc64bd85e26be5be8bc090849597a67">rotEsquerda</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada rotacao a esquerda na arvore.  <a href="#a9bc64bd85e26be5be8bc090849597a67"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a0df8a40c104d382ca80edbede7d61261">rotDireita</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada rotacao a direita na arvore.  <a href="#a0df8a40c104d382ca80edbede7d61261"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#ad2e82e163c9735288cdbb28b7c5c3b24">rotDupEsquerda</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada rotacao dupla a esquerda na arvore.  <a href="#ad2e82e163c9735288cdbb28b7c5c3b24"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#aa04d998e692b18383b1feb68332903eb">rotDupDireita</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada rotacao dupla a direita na arvore.  <a href="#aa04d998e692b18383b1feb68332903eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a825c739b99148a3ed276e5fb8882bcce">balanceamentoEsq</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada balanceamento a esquerda na arvore.  <a href="#a825c739b99148a3ed276e5fb8882bcce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a2d8f3fc22c261ac85fc208d8261565e1">balanceamentoDir</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realizada balanceamento a direita na arvore.  <a href="#a2d8f3fc22c261ac85fc208d8261565e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a705e84d93f3a374d679acca074dc0397">NodoVazio</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Testa de o nodo é vazio.  <a href="#a705e84d93f3a374d679acca074dc0397"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#a45d54530b97bb8927768cb7fc621206f">altura</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcula a altura da arvore.  <a href="#a45d54530b97bb8927768cb7fc621206f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="avl_8h.html#af13e526f7aae6efac8f94e0d3e390ded">calculaFatorB</a> (<a class="el" href="structhash__entry__t.html">pNodoA</a> arv)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcula o fator de balanceamento da arvore.  <a href="#af13e526f7aae6efac8f94e0d3e390ded"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<dl class="version"><dt><b>Versão:</b></dt><dd>1.1 </dd></dl>
+<hr/><h2>Definições dos tipos</h2>
+<a class="anchor" id="ae94f03ff0a1304b49e2535a071ac8118"></a><!-- doxytag: member="avl.h::pNodoA" ref="ae94f03ff0a1304b49e2535a071ac8118" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structhash__entry__t.html">hash_entry_t</a>
+ * <a class="el" href="structhash__entry__t.html">pNodoA</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ponteiro para um nó </p>
+
+</div>
+</div>
+<hr/><h2>Funções</h2>
+<a class="anchor" id="a45d54530b97bb8927768cb7fc621206f"></a><!-- doxytag: member="avl.h::altura" ref="a45d54530b97bb8927768cb7fc621206f" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int altura </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calcula a altura da arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da árvore </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2d8f3fc22c261ac85fc208d8261565e1"></a><!-- doxytag: member="avl.h::balanceamentoDir" ref="a2d8f3fc22c261ac85fc208d8261565e1" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> balanceamentoDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada balanceamento a direita na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a825c739b99148a3ed276e5fb8882bcce"></a><!-- doxytag: member="avl.h::balanceamentoEsq" ref="a825c739b99148a3ed276e5fb8882bcce" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> balanceamentoEsq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada balanceamento a esquerda na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af13e526f7aae6efac8f94e0d3e390ded"></a><!-- doxytag: member="avl.h::calculaFatorB" ref="af13e526f7aae6efac8f94e0d3e390ded" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calculaFatorB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calcula o fator de balanceamento da arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da árvore </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa67ab32aa33e417c0033a102c588551d"></a><!-- doxytag: member="avl.h::destroiAVL" ref="aa67ab32aa33e417c0033a102c588551d" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroiAVL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Destroi a arvore, desalocando memoria ocupada por ela. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore a ser destruida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c7ae465513e346995a95ae8b0b24cd3"></a><!-- doxytag: member="avl.h::findNodo" ref="a0c7ae465513e346995a95ae8b0b24cd3" args="(pNodoA arv, char *name, int *find)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> findNodo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>find</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Encontra um elemento na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>nome do elemento a ser pesquisado. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>find</em>&nbsp;</td><td>endereco de um inteiro que armazena se o elemento foi encontrado (1 encontrado, 0 nao). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>ponteiro para o nodo da arvore que contem o elemento pesquisado. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae6f8bedca22b5dab2e308eb03197e0fe"></a><!-- doxytag: member="avl.h::imprimeAVL" ref="ae6f8bedca22b5dab2e308eb03197e0fe" args="(FILE *out, pNodoA arv, int *n_nodo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void imprimeAVL </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>n_nodo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Imprime a arvore em ordem crescente de ordenamento. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>out</em>&nbsp;</td><td>saida para imprimir a arvore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n_nodo</em>&nbsp;</td><td>endereco de um contador do numero de nodos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c2f63153848a6f9371ae494f0d2bcd7"></a><!-- doxytag: member="avl.h::inicializaAVL" ref="a8c2f63153848a6f9371ae494f0d2bcd7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> inicializaAVL </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Inicializar a arvore AVL. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>ponteiro para a raiz da arvore. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac55558757991ca7e4d8cebd13e47c8dd"></a><!-- doxytag: member="avl.h::insereAVL" ref="ac55558757991ca7e4d8cebd13e47c8dd" args="(pNodoA arv, entry_t *symbol)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> insereAVL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structentry__t.html">entry_t</a> *&nbsp;</td>
+          <td class="paramname"> <em>symbol</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Inserve elemento na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>symbol</em>&nbsp;</td><td>entrada a ser inserida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>ponteiro para a raiz da arvore. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a705e84d93f3a374d679acca074dc0397"></a><!-- doxytag: member="avl.h::NodoVazio" ref="a705e84d93f3a374d679acca074dc0397" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NodoVazio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Testa de o nodo é vazio. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>nó a ser testado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac61a056a6faa1fab3cb77d91c1a12bb1"></a><!-- doxytag: member="avl.h::printNiveis" ref="ac61a056a6faa1fab3cb77d91c1a12bb1" args="(pNodoA arv, int count)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printNiveis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Imprime a arvore com saida formatada em camadas. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>valor da camada inicial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0df8a40c104d382ca80edbede7d61261"></a><!-- doxytag: member="avl.h::rotDireita" ref="a0df8a40c104d382ca80edbede7d61261" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> rotDireita </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada rotacao a direita na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa04d998e692b18383b1feb68332903eb"></a><!-- doxytag: member="avl.h::rotDupDireita" ref="aa04d998e692b18383b1feb68332903eb" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> rotDupDireita </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada rotacao dupla a direita na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2e82e163c9735288cdbb28b7c5c3b24"></a><!-- doxytag: member="avl.h::rotDupEsquerda" ref="ad2e82e163c9735288cdbb28b7c5c3b24" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> rotDupEsquerda </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada rotacao dupla a esquerda na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9bc64bd85e26be5be8bc090849597a67"></a><!-- doxytag: member="avl.h::rotEsquerda" ref="a9bc64bd85e26be5be8bc090849597a67" args="(pNodoA arv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhash__entry__t.html">pNodoA</a> rotEsquerda </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhash__entry__t.html">pNodoA</a>&nbsp;</td>
+          <td class="paramname"> <em>arv</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Realizada rotacao a esquerda na arvore. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arv</em>&nbsp;</td><td>raiz da arvore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Gerado em Mon Apr 12 21:14:31 2010 para Pico por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>
