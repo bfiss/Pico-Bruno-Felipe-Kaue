@@ -6,28 +6,40 @@
 
 #include <stdio.h>
 
+enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT };
+enum opType  { _VAR, _TMP, _VAL };
+
 /** 
  * Estrutura de dados (que implementa uma intrucao TAC, ver Etapa 4), a ser
  * encadeada na lista. Por enquanto, o que representa Ã© irrelevante.
  */
 struct tac {
-   char* op;   /**< "+", "-", ":=", "if", etc... */
-   char* res;  /**< "TMP100" */
-   char* arg1; /**< "TMP0"   */
-   char* arg2; /**< "TMP1"   */
+   enum tacType type;
+   enum opType  tArg1;
+   enum opType  tArg2;
+   enum opType  tArg3;
+   int     arg1;
+   int     arg2;
+   int     arg3;
+   char    op[2];
 };
 
 /** \brief  Construtor de Instrucao TAC 
  *
  * Para testes, pode-se usar qualquer string em argumentos.
- * @param res um char*.
- * @param arg1 um char*.
- * @param op um char*.
- * @param arg2 um char*.
+ * @param type  tipo da instrução.
+ * @param tArg1 um tipo de operando.
+ * @param tArg2 um tipo de operando.
+ * @param tArg3 um tipo de operando.
+ * @param arg1  um int.
+ * @param arg2  um int.
+ * @param arg3  um int.
+ * @param op    um char*.
  * @return um ponteiro sobre uma 'struct tac'.
  */
-struct tac* create_inst_tac(const char* res, const char* arg1, 
-                 const char* op, const char* arg2);
+struct tac* create_inst_tac(const enum tacType type, const enum opType tArg1,
+       const enum opType tArg2, const enum opType tArg3, const int arg1,
+                       const int arg2, const int arg3, const char op[2]);
 
 /** \brief Funcao que imprime o conteudo de uma instrucao TAC 
  *

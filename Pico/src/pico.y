@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "node.h"
 #include "symbol_table.h"
+#include "lista.h"
 
 #define UNDEFINED_SYMBOL_ERROR -21
 #define NESTED_LIMIT_EXCEEDED  -22
@@ -48,7 +49,11 @@
 	symbol_t s_table[MAX_SIZE];
 	int desloc[MAX_SIZE];
 	int table_atual = 0;
+	int stackSize = 0;
+	int tmpSize = 0;
 	int increase_symbol_table();
+
+	struct node_tac * gera_tac(Node * node, int labV, int labF, int tmp);
 
 %}
 
@@ -148,14 +153,14 @@ bloco: inicio code fim    { $$ = $2; }
 inicio: '{'               { tmp = increase_symbol_table(); if(tmp)return tmp; }
      ;
 
-fim: '}'                  { --table_atual; }
+fim: '}'                  { stackSize = stackSize < desloc[table_atual] ? desloc[table_atual] : stackSize; --table_atual; }
   ;
 
 comando: lvalue '=' expr	{ $$ = Create_node(lineno, com_node, "Atribuicao", NULL, 2, $1, $3); }
        | enunciado
        ;
 
-lvalue: IDF							{ CHECK_IDF($1); $$ = create_leaf(lineno, idf_node, $1, idf_aux); }
+lvalue: IDF			{ CHECK_IDF($1); $$ = create_leaf(lineno, idf_node, $1, idf_aux); }
       | IDF '[' listaexpr ']'	{ CHECK_IDF($1); $$ = Create_node(lineno, lvalue_node, "Valor Indexado", NULL, 2, create_leaf(lineno, idf_node, $1, idf_aux), $3); }
       ;
 
@@ -180,18 +185,18 @@ chamaproc: IDF '(' listaexpr ')' { CHECK_IDF($1); $$ = Create_node(lineno, proc_
 enunciado: expr
          | IF '(' expbool ')' THEN acoes fiminstcontrole	{ $$ = Create_node(lineno, if_node, "IF", NULL, 3, $3, $6, $7); }
          | WHILE '(' expbool ')' '{' acoes '}'			{ $$ = Create_node(lineno, while_node, "WHILE", NULL, 2, $3, $6); }
-	 | PRINTF '(' expr ')'					{ $$ = Create_node(lineno, print_node, "PRINT", NULL, 1, $3); }
+         | PRINTF '(' expr ')'					{ $$ = Create_node(lineno, print_node, "PRINT", NULL, 1, $3); }
          ;
 
 fiminstcontrole: END 			{ $$ = NULL; }
                | ELSE acoes END	{ $$ = $2; }
                ;
 
-expbool: TRUE  					{ $$ = create_leaf(lineno, true_node, "TRUE", NULL); }
-       | FALSE 					{ $$ = create_leaf(lineno, false_node, "FALSE", NULL); }
+expbool: TRUE  				{ $$ = create_leaf(lineno, true_node, "TRUE", NULL); }
+       | FALSE 				{ $$ = create_leaf(lineno, false_node, "FALSE", NULL); }
        | '(' expbool ')' 		{ $$ = $2; }
-       | expbool AND expbool	{ $$ = Create_node(lineno, and_node, "AND", NULL, 2, $1, $3); }
-       | expbool OR expbool 	{ $$ = Create_node(lineno, or_node, "OR", NULL, 2, $1, $3); }
+       | expbool AND expbool	        { $$ = Create_node(lineno, and_node, "AND", NULL, 2, $1, $3); }
+       | expbool OR expbool 	        { $$ = Create_node(lineno, or_node, "OR", NULL, 2, $1, $3); }
        | NOT expbool 			{ $$ = Create_node(lineno, not_node, "NOT", NULL, 1, $2); }
        | expr '>' expr			{ $$ = Create_node(lineno, sup_node, ">", NULL, 2, $1, $3); }
        | expr '<' expr 			{ $$ = Create_node(lineno, inf_node, "<", NULL, 2, $1, $3); }
@@ -206,18 +211,26 @@ expbool: TRUE  					{ $$ = create_leaf(lineno, true_node, "TRUE", NULL); }
 
 char* progname;
 extern FILE* yyin;
+FILE * output;
 
 int main(int argc, char* argv[]) 
 {
+   struct node_tac * code;
    lineno = 1;
-   if (argc != 2) {
-     printf("Usage: %s <input_file>. Try again!\n", argv[0]);
+   if (argc != 4) {
+     printf("Usage: %s -o <output_file> <input_file>. Try again!\n", argv[0]);
      exit(-1);
    }
-   yyin = fopen(argv[1], "r");
+   yyin = fopen(argv[3], "r");
    if (!yyin) {
-     printf("Usage: %s <input_file>. Could not find %s. Try again!\n", 
-         argv[0], argv[1]);
+     printf("Usage: %s -o <output_file> <input_file>. Could not find %s. Try again!\n",
+         argv[0], argv[3]);
+     exit(-1);
+   }
+   output = fopen(argv[2], "w");
+   if (!yyin) {
+     printf("Usage: %s -o <output_file> <input_file>. Could not find %s. Try again!\n",
+         argv[0], argv[2]);
      exit(-1);
    }
 
@@ -228,8 +241,13 @@ int main(int argc, char* argv[])
 
    if (!yyparse()) {
 		printf("OKAY\n");
-		print_table(s_table[0]);
-		print_tree(syntax_tree,0);
+		stackSize = stackSize < desloc[0] ? desloc[0] : stackSize;
+		code = gera_tac(syntax_tree, 0, 0, 0);
+		fprintf(output,"%i\n%i\n",stackSize,tmpSize);
+		print_tac(output,code);
+		/*print_table(s_table[0]);
+		print_tree(syntax_tree,0); */
+                
   } else 
       printf("ERROR\n");
 
@@ -303,5 +321,15 @@ dimList * matrix_info(Node * node, int size) {
 		return create_dimList(*((int*)(node->child[0]->attribute)), *((int*)(node->child[1]->attribute))+1, size, NULL);
 	return create_dimList(*((int*)(node->child[0]->attribute)), *((int*)(node->child[1]->attribute))+1, size, matrix_info(node->child[2],size));
 }
+
+int geraLabel() {
+    static int x = 0;
+    return x++;
+}
+
+struct node_tac * gera_tac(Node * node, int labV, int labF, int tmp) {
+	return 0;
+}
+
 
 	
