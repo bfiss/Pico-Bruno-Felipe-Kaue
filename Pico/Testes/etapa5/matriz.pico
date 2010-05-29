@@ -1,0 +1,14 @@
+a,b,c : int;
+matriz : int [ 1 : 10 , 2 : 20 ];
+m : int [1:10];
+
+a = 2;
+matriz[2,2] = 2;
+matriz[2,3] = a;
+matriz[a,2] = matriz[2,3] + 1;
+print (matriz[a,a]);
+a = 2;
+matriz[2] = 2;
+matriz[3] = a;
+matriz[a] = matriz[2] + 1;
+print (matriz[a]);
