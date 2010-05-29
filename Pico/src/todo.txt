@@ -1,0 +1,1 @@
+ * testar tipo do argumento do print

@@ -233,7 +233,7 @@ int main(int argc, char* argv[])
      exit(-1);
    }
    output = fopen(argv[2], "w");
-   if (!yyin) {
+   if (!output) {
      printf("Usage: %s -o <output_file> <input_file>. Could not find %s. Try again!\n",
          argv[0], argv[2]);
      exit(-1);

@@ -5,12 +5,13 @@ OBJS = lista.o node.o symbol_table.o avl.o entry.o
 ## descomentar a linha abaixo e chamar "make -B" e "make test" para testar
 #TEST = -D "__BFK_DO_TESTING__"
 
-all: etapa4 clean
+all: etapa4
 
 test: test_etapa4
 
 ## Etapa 4
 etapa4: pico
+	ctags *
 
 test_etapa4: pico
 

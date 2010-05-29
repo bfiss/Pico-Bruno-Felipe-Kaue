@@ -1,0 +1,669 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AND	tokens.h	/^     AND = 269,$/;"	e	enum:yytokentype
+AND	tokens.h	84;"	d
+AND	y.tab.c	/^     AND = 269,$/;"	e	enum:yytokentype	file:
+AND	y.tab.c	205;"	d	file:
+BEGIN	lex.yy.c	125;"	d	file:
+CC	Makefile	/^CC      = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall $(TEST)$/;"	m
+CHAR	tokens.h	/^     CHAR = 262,$/;"	e	enum:yytokentype
+CHAR	tokens.h	77;"	d
+CHAR	y.tab.c	/^     CHAR = 262,$/;"	e	enum:yytokentype	file:
+CHAR	y.tab.c	198;"	d	file:
+CHECK_IDF	y.tab.c	89;"	d	file:
+CLEAN_TMP	y.tab.c	97;"	d	file:
+Create_node	node.c	/^Node* Create_node(int nl, Node_type t, char* lexema, $/;"	f
+DOUBLE	tokens.h	/^     DOUBLE = 261,$/;"	e	enum:yytokentype
+DOUBLE	tokens.h	76;"	d
+DOUBLE	y.tab.c	/^     DOUBLE = 261,$/;"	e	enum:yytokentype	file:
+DOUBLE	y.tab.c	197;"	d	file:
+DQUOTE	tokens.h	/^     DQUOTE = 264,$/;"	e	enum:yytokentype
+DQUOTE	tokens.h	79;"	d
+DQUOTE	y.tab.c	/^     DQUOTE = 264,$/;"	e	enum:yytokentype	file:
+DQUOTE	y.tab.c	200;"	d	file:
+ECHO	lex.yy.c	638;"	d	file:
+ELSE	tokens.h	/^     ELSE = 274,$/;"	e	enum:yytokentype
+ELSE	tokens.h	89;"	d
+ELSE	y.tab.c	/^     ELSE = 274,$/;"	e	enum:yytokentype	file:
+ELSE	y.tab.c	210;"	d	file:
+END	tokens.h	/^     END = 278,$/;"	e	enum:yytokentype
+END	tokens.h	93;"	d
+END	y.tab.c	/^     END = 278,$/;"	e	enum:yytokentype	file:
+END	y.tab.c	214;"	d	file:
+EOB_ACT_CONTINUE_SCAN	lex.yy.c	168;"	d	file:
+EOB_ACT_END_OF_FILE	lex.yy.c	169;"	d	file:
+EOB_ACT_LAST_MATCH	lex.yy.c	170;"	d	file:
+EQ	tokens.h	/^     EQ = 267,$/;"	e	enum:yytokentype
+EQ	tokens.h	82;"	d
+EQ	y.tab.c	/^     EQ = 267,$/;"	e	enum:yytokentype	file:
+EQ	y.tab.c	203;"	d	file:
+FALSE	tokens.h	/^     FALSE = 280,$/;"	e	enum:yytokentype
+FALSE	tokens.h	95;"	d
+FALSE	y.tab.c	/^     FALSE = 280,$/;"	e	enum:yytokentype	file:
+FALSE	y.tab.c	216;"	d	file:
+FLEXINT_H	lex.yy.c	29;"	d	file:
+FLEX_BETA	lex.yy.c	13;"	d	file:
+FLEX_SCANNER	lex.yy.c	8;"	d	file:
+FLOAT	tokens.h	/^     FLOAT = 260,$/;"	e	enum:yytokentype
+FLOAT	tokens.h	75;"	d
+FLOAT	y.tab.c	/^     FLOAT = 260,$/;"	e	enum:yytokentype	file:
+FLOAT	y.tab.c	196;"	d	file:
+FOR	tokens.h	/^     FOR = 281,$/;"	e	enum:yytokentype
+FOR	tokens.h	96;"	d
+FOR	y.tab.c	/^     FOR = 281,$/;"	e	enum:yytokentype	file:
+FOR	y.tab.c	217;"	d	file:
+F_LIT	tokens.h	/^     F_LIT = 277,$/;"	e	enum:yytokentype
+F_LIT	tokens.h	92;"	d
+F_LIT	y.tab.c	/^     F_LIT = 277,$/;"	e	enum:yytokentype	file:
+F_LIT	y.tab.c	213;"	d	file:
+GE	tokens.h	/^     GE = 266,$/;"	e	enum:yytokentype
+GE	tokens.h	81;"	d
+GE	y.tab.c	/^     GE = 266,$/;"	e	enum:yytokentype	file:
+GE	y.tab.c	202;"	d	file:
+IDF	tokens.h	/^     IDF = 258,$/;"	e	enum:yytokentype
+IDF	tokens.h	73;"	d
+IDF	y.tab.c	/^     IDF = 258,$/;"	e	enum:yytokentype	file:
+IDF	y.tab.c	194;"	d	file:
+IF	tokens.h	/^     IF = 272,$/;"	e	enum:yytokentype
+IF	tokens.h	87;"	d
+IF	y.tab.c	/^     IF = 272,$/;"	e	enum:yytokentype	file:
+IF	y.tab.c	208;"	d	file:
+INICIALIZA	lista.c	11;"	d	file:
+INITIAL	lex.yy.c	546;"	d	file:
+INT	tokens.h	/^     INT = 259,$/;"	e	enum:yytokentype
+INT	tokens.h	74;"	d
+INT	y.tab.c	/^     INT = 259,$/;"	e	enum:yytokentype	file:
+INT	y.tab.c	195;"	d	file:
+INT16_MAX	lex.yy.c	71;"	d	file:
+INT16_MIN	lex.yy.c	62;"	d	file:
+INT32_MAX	lex.yy.c	74;"	d	file:
+INT32_MIN	lex.yy.c	65;"	d	file:
+INT8_MAX	lex.yy.c	68;"	d	file:
+INT8_MIN	lex.yy.c	59;"	d	file:
+INT_LIT	tokens.h	/^     INT_LIT = 276,$/;"	e	enum:yytokentype
+INT_LIT	tokens.h	91;"	d
+INT_LIT	y.tab.c	/^     INT_LIT = 276,$/;"	e	enum:yytokentype	file:
+INT_LIT	y.tab.c	212;"	d	file:
+LDFLAGS	Makefile	/^LDFLAGS = -g$/;"	m
+LE	tokens.h	/^     LE = 265,$/;"	e	enum:yytokentype
+LE	tokens.h	80;"	d
+LE	y.tab.c	/^     LE = 265,$/;"	e	enum:yytokentype	file:
+LE	y.tab.c	201;"	d	file:
+MAX_CHILDREN_NUMBER	node.h	71;"	d
+MAX_SIZE	y.tab.c	87;"	d	file:
+NE	tokens.h	/^     NE = 268,$/;"	e	enum:yytokentype
+NE	tokens.h	83;"	d
+NE	y.tab.c	/^     NE = 268,$/;"	e	enum:yytokentype	file:
+NE	y.tab.c	204;"	d	file:
+NESTED_LIMIT_EXCEEDED	y.tab.c	86;"	d	file:
+NEXT	tokens.h	/^     NEXT = 282,$/;"	e	enum:yytokentype
+NEXT	tokens.h	97;"	d
+NEXT	y.tab.c	/^     NEXT = 282,$/;"	e	enum:yytokentype	file:
+NEXT	y.tab.c	218;"	d	file:
+NOT	tokens.h	/^     NOT = 271,$/;"	e	enum:yytokentype
+NOT	tokens.h	86;"	d
+NOT	y.tab.c	/^     NOT = 271,$/;"	e	enum:yytokentype	file:
+NOT	y.tab.c	207;"	d	file:
+Node	node.h	/^} Node;$/;"	t	typeref:struct:_node
+Node_type	node.h	/^typedef int Node_type; \/**< tipo do nó *\/$/;"	t
+NodoVazio	avl.c	/^int NodoVazio(pNodoA arv)$/;"	f
+OBJS	Makefile	/^OBJS = lista.o node.o symbol_table.o avl.o entry.o$/;"	m
+OR	tokens.h	/^     OR = 270,$/;"	e	enum:yytokentype
+OR	tokens.h	85;"	d
+OR	y.tab.c	/^     OR = 270,$/;"	e	enum:yytokentype	file:
+OR	y.tab.c	206;"	d	file:
+PRINTF	tokens.h	/^     PRINTF = 285$/;"	e	enum:yytokentype
+PRINTF	tokens.h	100;"	d
+PRINTF	y.tab.c	/^     PRINTF = 285$/;"	e	enum:yytokentype	file:
+PRINTF	y.tab.c	221;"	d	file:
+QUOTE	tokens.h	/^     QUOTE = 263,$/;"	e	enum:yytokentype
+QUOTE	tokens.h	78;"	d
+QUOTE	y.tab.c	/^     QUOTE = 263,$/;"	e	enum:yytokentype	file:
+QUOTE	y.tab.c	199;"	d	file:
+REJECT	lex.yy.c	517;"	d	file:
+REPEAT	tokens.h	/^     REPEAT = 283,$/;"	e	enum:yytokentype
+REPEAT	tokens.h	98;"	d
+REPEAT	y.tab.c	/^     REPEAT = 283,$/;"	e	enum:yytokentype	file:
+REPEAT	y.tab.c	219;"	d	file:
+STR_SIZE	y.tab.c	114;"	d	file:
+SdimList	entry.h	/^typedef struct SdimList {$/;"	s
+TABLE_SIZE	symbol_table.h	12;"	d
+TABLE_SIZE	symbol_table.h	14;"	d
+TCHAR	entry.h	11;"	d
+TDOUBLE	entry.h	10;"	d
+TFLOAT	entry.h	9;"	d
+THEN	tokens.h	/^     THEN = 273,$/;"	e	enum:yytokentype
+THEN	tokens.h	88;"	d
+THEN	y.tab.c	/^     THEN = 273,$/;"	e	enum:yytokentype	file:
+THEN	y.tab.c	209;"	d	file:
+TINTEGER	entry.h	8;"	d
+TRUE	tokens.h	/^     TRUE = 279,$/;"	e	enum:yytokentype
+TRUE	tokens.h	94;"	d
+TRUE	y.tab.c	/^     TRUE = 279,$/;"	e	enum:yytokentype	file:
+TRUE	y.tab.c	215;"	d	file:
+UINT16_MAX	lex.yy.c	80;"	d	file:
+UINT32_MAX	lex.yy.c	83;"	d	file:
+UINT8_MAX	lex.yy.c	77;"	d	file:
+UNDEFINED_SYMBOL_ERROR	y.tab.c	85;"	d	file:
+UNTIL	tokens.h	/^     UNTIL = 284,$/;"	e	enum:yytokentype
+UNTIL	tokens.h	99;"	d
+UNTIL	y.tab.c	/^     UNTIL = 284,$/;"	e	enum:yytokentype	file:
+UNTIL	y.tab.c	220;"	d	file:
+WHILE	tokens.h	/^     WHILE = 275,$/;"	e	enum:yytokentype
+WHILE	tokens.h	90;"	d
+WHILE	y.tab.c	/^     WHILE = 275,$/;"	e	enum:yytokentype	file:
+WHILE	y.tab.c	211;"	d	file:
+YYABORT	y.tab.c	758;"	d	file:
+YYACCEPT	y.tab.c	757;"	d	file:
+YYBACKUP	y.tab.c	770;"	d	file:
+YYBISON	y.tab.c	46;"	d	file:
+YYBISON_VERSION	y.tab.c	49;"	d	file:
+YYCOPY	y.tab.c	433;"	d	file:
+YYCOPY	y.tab.c	436;"	d	file:
+YYDEBUG	y.tab.c	140;"	d	file:
+YYDPRINTF	y.tab.c	850;"	d	file:
+YYDPRINTF	y.tab.c	999;"	d	file:
+YYEMPTY	y.tab.c	754;"	d	file:
+YYEOF	y.tab.c	755;"	d	file:
+YYERRCODE	y.tab.c	789;"	d	file:
+YYERROR	y.tab.c	759;"	d	file:
+YYERROR_VERBOSE	y.tab.c	145;"	d	file:
+YYERROR_VERBOSE	y.tab.c	146;"	d	file:
+YYERROR_VERBOSE	y.tab.c	148;"	d	file:
+YYFAIL	y.tab.c	766;"	d	file:
+YYFINAL	y.tab.c	466;"	d	file:
+YYFPRINTF	y.tab.c	847;"	d	file:
+YYFREE	y.tab.c	399;"	d	file:
+YYID	y.tab.c	/^YYID (int yyi)$/;"	f	file:
+YYID	y.tab.c	323;"	d	file:
+YYINITDEPTH	y.tab.c	1008;"	d	file:
+YYLAST	y.tab.c	468;"	d	file:
+YYLEX	y.tab.c	837;"	d	file:
+YYLEX	y.tab.c	839;"	d	file:
+YYLLOC_DEFAULT	y.tab.c	798;"	d	file:
+YYLSP_NEEDED	y.tab.c	64;"	d	file:
+YYMALLOC	y.tab.c	392;"	d	file:
+YYMAXDEPTH	y.tab.c	1019;"	d	file:
+YYMAXUTOK	y.tab.c	481;"	d	file:
+YYNNTS	y.tab.c	473;"	d	file:
+YYNRULES	y.tab.c	475;"	d	file:
+YYNSTATES	y.tab.c	477;"	d	file:
+YYNTOKENS	y.tab.c	471;"	d	file:
+YYPACT_NINF	y.tab.c	658;"	d	file:
+YYPOPSTACK	y.tab.c	1359;"	d	file:
+YYPULL	y.tab.c	61;"	d	file:
+YYPURE	y.tab.c	55;"	d	file:
+YYPUSH	y.tab.c	58;"	d	file:
+YYRECOVERING	y.tab.c	768;"	d	file:
+YYRHSLOC	y.tab.c	796;"	d	file:
+YYSIZE_MAXIMUM	y.tab.c	300;"	d	file:
+YYSIZE_T	y.tab.c	288;"	d	file:
+YYSIZE_T	y.tab.c	290;"	d	file:
+YYSIZE_T	y.tab.c	294;"	d	file:
+YYSIZE_T	y.tab.c	296;"	d	file:
+YYSKELETON_NAME	y.tab.c	52;"	d	file:
+YYSTACK_ALLOC	y.tab.c	346;"	d	file:
+YYSTACK_ALLOC	y.tab.c	350;"	d	file:
+YYSTACK_ALLOC	y.tab.c	355;"	d	file:
+YYSTACK_ALLOC	y.tab.c	378;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	y.tab.c	375;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	y.tab.c	381;"	d	file:
+YYSTACK_BYTES	y.tab.c	425;"	d	file:
+YYSTACK_FREE	y.tab.c	369;"	d	file:
+YYSTACK_FREE	y.tab.c	379;"	d	file:
+YYSTACK_GAP_MAXIMUM	y.tab.c	421;"	d	file:
+YYSTACK_RELOCATE	y.tab.c	452;"	d	file:
+YYSTATE	lex.yy.c	132;"	d	file:
+YYSTYPE	tokens.h	/^typedef union YYSTYPE$/;"	u
+YYSTYPE	tokens.h	/^} YYSTYPE;$/;"	t	typeref:union:YYSTYPE
+YYSTYPE	y.tab.c	/^typedef union YYSTYPE$/;"	u	file:
+YYSTYPE	y.tab.c	/^} YYSTYPE;$/;"	t	typeref:union:YYSTYPE	file:
+YYSTYPE_IS_DECLARED	tokens.h	124;"	d
+YYSTYPE_IS_DECLARED	y.tab.c	245;"	d	file:
+YYSTYPE_IS_TRIVIAL	tokens.h	122;"	d
+YYSTYPE_IS_TRIVIAL	y.tab.c	243;"	d	file:
+YYTABLES_NAME	lex.yy.c	1988;"	d	file:
+YYTABLE_NINF	y.tab.c	688;"	d	file:
+YYTERROR	y.tab.c	788;"	d	file:
+YYTOKENTYPE	tokens.h	38;"	d
+YYTOKENTYPE	y.tab.c	159;"	d	file:
+YYTOKEN_TABLE	y.tab.c	153;"	d	file:
+YYTRANSLATE	y.tab.c	483;"	d	file:
+YYUNDEFTOK	y.tab.c	480;"	d	file:
+YYUSE	y.tab.c	316;"	d	file:
+YYUSE	y.tab.c	318;"	d	file:
+YY_	y.tab.c	306;"	d	file:
+YY_	y.tab.c	310;"	d	file:
+YY_AT_BOL	lex.yy.c	339;"	d	file:
+YY_BREAK	lex.yy.c	717;"	d	file:
+YY_BUFFER_EOF_PENDING	lex.yy.c	255;"	d	file:
+YY_BUFFER_NEW	lex.yy.c	243;"	d	file:
+YY_BUFFER_NORMAL	lex.yy.c	244;"	d	file:
+YY_BUFFER_STATE	lex.yy.c	/^typedef struct yy_buffer_state *YY_BUFFER_STATE;$/;"	t	typeref:struct:yy_buffer_state	file:
+YY_BUF_SIZE	lex.yy.c	149;"	d	file:
+YY_BUF_SIZE	lex.yy.c	151;"	d	file:
+YY_CHAR	lex.yy.c	/^typedef unsigned char YY_CHAR;$/;"	t	file:
+YY_CURRENT_BUFFER	lex.yy.c	271;"	d	file:
+YY_CURRENT_BUFFER_LVALUE	lex.yy.c	278;"	d	file:
+YY_DECL	lex.yy.c	705;"	d	file:
+YY_DECL_IS_OURS	lex.yy.c	701;"	d	file:
+YY_DO_BEFORE_ACTION	lex.yy.c	367;"	d	file:
+YY_END_OF_BUFFER	lex.yy.c	375;"	d	file:
+YY_END_OF_BUFFER_CHAR	lex.yy.c	140;"	d	file:
+YY_EXIT_FAILURE	lex.yy.c	1786;"	d	file:
+YY_EXTRA_TYPE	lex.yy.c	557;"	d	file:
+YY_FATAL_ERROR	lex.yy.c	692;"	d	file:
+YY_FLEX_MAJOR_VERSION	lex.yy.c	9;"	d	file:
+YY_FLEX_MINOR_VERSION	lex.yy.c	10;"	d	file:
+YY_FLEX_SUBMINOR_VERSION	lex.yy.c	11;"	d	file:
+YY_FLUSH_BUFFER	lex.yy.c	307;"	d	file:
+YY_INPUT	lex.yy.c	645;"	d	file:
+YY_INT_ALIGNED	lex.yy.c	4;"	d	file:
+YY_LESS_LINENO	lex.yy.c	172;"	d	file:
+YY_LOCATION_PRINT	y.tab.c	824;"	d	file:
+YY_LOCATION_PRINT	y.tab.c	829;"	d	file:
+YY_MORE_ADJ	lex.yy.c	519;"	d	file:
+YY_NEW_FILE	lex.yy.c	138;"	d	file:
+YY_NO_INPUT	lex.yy.c	542;"	d	file:
+YY_NULL	lex.yy.c	112;"	d	file:
+YY_NUM_RULES	lex.yy.c	374;"	d	file:
+YY_READ_BUF_SIZE	lex.yy.c	627;"	d	file:
+YY_READ_BUF_SIZE	lex.yy.c	629;"	d	file:
+YY_REDUCE_PRINT	y.tab.c	1002;"	d	file:
+YY_REDUCE_PRINT	y.tab.c	989;"	d	file:
+YY_RESTORE_YY_MORE_OFFSET	lex.yy.c	520;"	d	file:
+YY_RULE_SETUP	lex.yy.c	720;"	d	file:
+YY_SC_TO_UI	lex.yy.c	119;"	d	file:
+YY_SKIP_YYWRAP	lex.yy.c	344;"	d	file:
+YY_STACK_PRINT	y.tab.c	1001;"	d	file:
+YY_STACK_PRINT	y.tab.c	951;"	d	file:
+YY_START	lex.yy.c	131;"	d	file:
+YY_START_STACK_INCR	lex.yy.c	687;"	d	file:
+YY_STATE_BUF_SIZE	lex.yy.c	157;"	d	file:
+YY_STATE_EOF	lex.yy.c	135;"	d	file:
+YY_STRUCT_YY_BUFFER_STATE	lex.yy.c	196;"	d	file:
+YY_SYMBOL_PRINT	y.tab.c	1000;"	d	file:
+YY_SYMBOL_PRINT	y.tab.c	856;"	d	file:
+YY_TYPEDEF_YY_BUFFER_STATE	lex.yy.c	160;"	d	file:
+YY_TYPEDEF_YY_SIZE_T	lex.yy.c	191;"	d	file:
+YY_USER_ACTION	lex.yy.c	712;"	d	file:
+YY_USE_CONST	lex.yy.c	100;"	d	file:
+YY_USE_CONST	lex.yy.c	93;"	d	file:
+_ATR	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_COMPOUND	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	e	enum:opType
+_EMPTY	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	e	enum:opType
+_ENTRY_H_	entry.h	6;"	d
+_GOTO	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_IF	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_LAB	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_LIDX	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_LISTA_C_	lista.c	8;"	d	file:
+_LISTA_H_	lista.h	5;"	d
+_NODE_H_	node.h	6;"	d
+_PRINT	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_RIDX	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	e	enum:tacType
+_STDLIB_H	y.tab.c	360;"	d	file:
+_STDLIB_H	y.tab.c	388;"	d	file:
+_SYMBOL_TABLE_H_	symbol_table.h	5;"	d
+_TMP	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	e	enum:opType
+_VAL	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	e	enum:opType
+_VAR	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	e	enum:opType
+__BFK_TESTING__	lex.yy.c	537;"	d	file:
+__BFK_TESTING__	lex.yy.c	539;"	d	file:
+__BKG_PTR__	lex.yy.c	/^void *__BKG_PTR__ = yyunput;$/;"	v
+__STDC_LIMIT_MACROS	lex.yy.c	39;"	d	file:
+__nodes_ids__	node.c	/^static int __nodes_ids__ = 0;$/;"	v	file:
+__s_symbol_t	symbol_table.h	/^typedef struct __s_symbol_t {$/;"	s
+_node	node.h	/^typedef struct _node {$/;"	s
+acoes	pico.y	/^acoes: comando ';'                                                               $/;"	l
+affect_node	node.h	36;"	d
+alloca	y.tab.c	353;"	d	file:
+altura	avl.c	/^int altura(pNodoA arv)$/;"	f
+and_node	node.h	38;"	d
+append_inst_tac	lista.c	/^void append_inst_tac(struct node_tac ** code_ref, struct tac * inst) {$/;"	f
+arg1	lista.h	/^   int     arg1;$/;"	m	struct:tac
+arg2	lista.h	/^   int     arg2;$/;"	m	struct:tac
+arg3	lista.h	/^   int     arg3;$/;"	m	struct:tac
+att	node.h	/^   struct attributes att;$/;"	m	struct:_node	typeref:struct:_node::attributes
+attribute	node.h	/^   void* attribute;\/**< Qualquer coisa por enquanto. *\/$/;"	m	struct:_node
+attributes	node.h	/^struct attributes {$/;"	s
+balanceamentoDir	avl.c	/^pNodoA balanceamentoDir(pNodoA arv)$/;"	f
+balanceamentoEsq	avl.c	/^pNodoA balanceamentoEsq(pNodoA arv)$/;"	f
+bloc_node	node.h	53;"	d
+bloco	pico.y	/^bloco: inicio code fim    { $$ = $2; }$/;"	l
+bool_com	pico.y	/^bool_com:$/;"	l
+c_inicial	entry.h	/^	int c_inicial;$/;"	m	struct:SdimList
+calculaFatorB	avl.c	/^int calculaFatorB(pNodoA arv)$/;"	f
+cat_tac	lista.c	/^void cat_tac(struct node_tac ** code_a, struct node_tac ** code_b) {$/;"	f
+chamaproc	pico.y	/^chamaproc: IDF '(' listaexpr ')' { CHECK_IDF($1); $$ = Create_node(lineno, proc_node, "ChamaProc", NULL, 2, create_leaf(lineno, idf_node, $1, idf_aux), $3); }$/;"	l
+char_node	node.h	52;"	d
+child	node.c	/^Node* child(Node* n, int i) {$/;"	f
+child	node.h	/^	struct _node *child[MAX_CHILDREN_NUMBER];\/**< Vetor de ponteiros para os filhos dos nodos. *\/$/;"	m	struct:_node	typeref:struct:_node::_node
+code	pico.y	/^code: declaracoes acoes { syntax_tree = Create_node(lineno, program_node, "code", s_table[table_atual], 2, $1, $2); $$ = syntax_tree; }$/;"	l
+com_node	node.h	62;"	d
+comando	pico.y	/^comando: lvalue '=' expr	{ $$ = Create_node(lineno, com_node, "Atribuicao", NULL, 2, $1, $3); }$/;"	l
+cond_node	node.h	35;"	d
+create_dimList	entry.c	/^dimList * create_dimList(int l_inferior, int l_superior, int bSize, dimList * son) {$/;"	f
+create_entry	entry.c	/^entry_t * create_entry(char * name, int type, int size, int desloc, void * extra ) {$/;"	f
+create_float	y.tab.c	/^Node* create_float(float x) {$/;"	f
+create_inst_tac	lista.c	/^struct tac * create_inst_tac(const enum tacType type, const enum opType tArg1,$/;"	f
+create_int	y.tab.c	/^Node* create_int(int x) {$/;"	f
+create_leaf	node.c	/^Node* create_leaf(int nl, Node_type t, char* lex, void* att) {$/;"	f
+create_node	node.c	/^Node* create_node(int nl, Node_type t, char* lex, $/;"	f
+current	y.tab.c	/^dimList * current = NULL;$/;"	v
+decl_list_node	node.h	28;"	d
+decl_node	node.h	27;"	d
+declaracao	pico.y	/^declaracao: listadeclaracao ':' tipo	{ $$ = Create_node(lineno, decl_node, "declaracao", NULL, 2, $1, $3); }$/;"	l
+declaracoes	pico.y	/^declaracoes: declaracao ';'	{ process_decl($1); $$ = $1; }$/;"	l
+decs_node	node.h	57;"	d
+deep_free_node	node.c	/^int deep_free_node(Node* n) {$/;"	f
+desloc	entry.h	/^   int desloc;  \/**< Endereco da proxima variavel. *\/$/;"	m	struct:entry_t
+desloc	node.h	/^	int desloc;$/;"	m	struct:attributes
+desloc	y.tab.c	/^	int desloc[MAX_SIZE];$/;"	v
+destroiAVL	avl.c	/^void destroiAVL(pNodoA arv)$/;"	f
+dimList	entry.h	/^} dimList;$/;"	t	typeref:struct:SdimList
+dimensoes	entry.h	/^	int dimensoes;$/;"	m	struct:SdimList
+dir	avl.h	/^  struct hash_entry_t *dir, \/**< filho à direita do nó*\/$/;"	m	struct:hash_entry_t	typeref:struct:hash_entry_t::hash_entry_t
+div_node	node.h	48;"	d
+else_node	node.h	56;"	d
+empty_node	node.h	24;"	d
+entry	avl.h	/^  struct entry_t *entry; \/**< conteúdo do nó *\/$/;"	m	struct:hash_entry_t	typeref:struct:hash_entry_t::entry_t
+entry	symbol_table.h	/^	hash_entry_t *entry[TABLE_SIZE]; \/**< implementação da symbol_table *\/$/;"	m	struct:__s_symbol_t
+entry_t	entry.h	/^typedef struct entry_t {$/;"	s
+entry_t	entry.h	/^} entry_t;$/;"	t	typeref:struct:entry_t
+enunc_node	node.h	64;"	d
+enunciado	pico.y	/^enunciado: expr$/;"	l
+eq_node	node.h	39;"	d
+esq	avl.h	/^  					  *esq; \/**< filho à esquerda do nó*\/$/;"	m	struct:hash_entry_t	typeref:struct:hash_entry_t::
+expbool	pico.y	/^expbool: TRUE  				{ $$ = create_leaf(lineno, true_node, "TRUE", NULL); }$/;"	l
+expr	pico.y	/^expr: expr '+' expr	{ $$ = Create_node(lineno, plus_node, "+", NULL, 2, $1, $3); }  $/;"	l
+expr_com	pico.y	/^expr_com:$/;"	l
+expr_node	node.h	65;"	d
+extra	entry.h	/^   void* extra; \/**< qualquer informacao extra. *\/$/;"	m	struct:entry_t
+false_node	node.h	55;"	d
+father	symbol_table.h	/^	struct __s_symbol_t * father;$/;"	m	struct:__s_symbol_t	typeref:struct:__s_symbol_t::__s_symbol_t
+fatorB	avl.h	/^	int fatorB; \/**< fator de balanceamento do nó*\/$/;"	m	struct:hash_entry_t
+fim	pico.y	/^fim: '}'                  { stackSize = stackSize < desloc[table_atual] ? desloc[table_atual] : stackSize; --table_atual; }$/;"	l
+fiminstcontrole	pico.y	/^fiminstcontrole: END 			{ $$ = NULL; }$/;"	l
+findNodo	avl.c	/^pNodoA findNodo(pNodoA arv, char* name, int* find)$/;"	f
+flex_int16_t	lex.yy.c	/^typedef int16_t flex_int16_t;$/;"	t	file:
+flex_int16_t	lex.yy.c	/^typedef short int flex_int16_t;$/;"	t	file:
+flex_int32_t	lex.yy.c	/^typedef int flex_int32_t;$/;"	t	file:
+flex_int32_t	lex.yy.c	/^typedef int32_t flex_int32_t;$/;"	t	file:
+flex_int8_t	lex.yy.c	/^typedef int8_t flex_int8_t;$/;"	t	file:
+flex_int8_t	lex.yy.c	/^typedef signed char flex_int8_t;$/;"	t	file:
+flex_uint16_t	lex.yy.c	/^typedef uint16_t flex_uint16_t;$/;"	t	file:
+flex_uint16_t	lex.yy.c	/^typedef unsigned short int flex_uint16_t;$/;"	t	file:
+flex_uint32_t	lex.yy.c	/^typedef uint32_t flex_uint32_t;$/;"	t	file:
+flex_uint32_t	lex.yy.c	/^typedef unsigned int flex_uint32_t;$/;"	t	file:
+flex_uint8_t	lex.yy.c	/^typedef uint8_t flex_uint8_t;$/;"	t	file:
+flex_uint8_t	lex.yy.c	/^typedef unsigned char flex_uint8_t; $/;"	t	file:
+float_node	node.h	22;"	d
+free_table	symbol_table.c	/^void free_table(symbol_t* table)$/;"	f
+geraLabel	y.tab.c	/^int geraLabel() {$/;"	f
+geraTmp	y.tab.c	/^int geraTmp() {$/;"	f
+gera_tac	y.tab.c	/^struct node_tac * gera_tac(Node * node) {$/;"	f
+hash	symbol_table.c	/^unsigned long hash(char *str)$/;"	f
+hash_entry_t	avl.h	/^ hash_entry_t,$/;"	t	typeref:struct:hash_entry_t
+hash_entry_t	avl.h	/^typedef struct hash_entry_t{$/;"	s
+height	node.c	/^int height(Node *n) {$/;"	f
+id	node.h	/^   int id;         \/**< rótulo do nó. Cada no deve ter um 'id' distinto. *\/$/;"	m	struct:_node
+idf_aux	y.tab.c	/^	entry_t* idf_aux;$/;"	v
+idf_node	node.h	20;"	d
+if_node	node.h	32;"	d
+imprimeAVL	avl.c	/^void imprimeAVL(FILE* out, pNodoA arv, int *n_nodo)$/;"	f
+increase_symbol_table	y.tab.c	/^int increase_symbol_table() {$/;"	f
+inf_eq_node	node.h	43;"	d
+inf_node	node.h	41;"	d
+inicializaAVL	avl.c	/^pNodoA inicializaAVL()$/;"	f
+inicio	pico.y	/^inicio: '{'               { tmp = increase_symbol_table(); if(tmp)return tmp; }$/;"	l
+init_table	symbol_table.c	/^int init_table(symbol_t* table, symbol_t father)$/;"	f
+insereAVL	avl.c	/^pNodoA insereAVL(pNodoA arv, entry_t* simbol, int * success)$/;"	f
+insert	symbol_table.c	/^int insert(symbol_t* table, entry_t* entry)$/;"	f
+inst	lista.h	/^   struct tac * inst; \/**< informação a ser armazenada *\/$/;"	m	struct:node_tac	typeref:struct:node_tac::tac
+int_node	node.h	21;"	d
+l_inferior	entry.h	/^	int l_inferior;$/;"	m	struct:SdimList
+l_superior	entry.h	/^	int l_superior;$/;"	m	struct:SdimList
+labelF	node.h	/^	int labelF;$/;"	m	struct:attributes
+labelT	node.h	/^	int labelT;$/;"	m	struct:attributes
+leaf	tokens.h	/^	void* leaf;$/;"	m	union:YYSTYPE
+leaf	y.tab.c	/^	void* leaf;$/;"	m	union:YYSTYPE	file:
+lexeme	node.h	/^   char* lexeme;   \/**< irrelevante por enquanto. *\/$/;"	m	struct:_node
+lexpr_node	node.h	66;"	d
+lineno	y.tab.c	/^	int lineno, tmp;$/;"	v
+list	entry.h	/^	struct SdimList * list;$/;"	m	struct:SdimList	typeref:struct:SdimList::SdimList
+listad_node	node.h	61;"	d
+listadeclaracao	pico.y	/^listadeclaracao: IDF 				{ $$ = Create_node(lineno, decl_list_node, "listadeclaracao", NULL, 1, create_leaf(lineno, idf_node, $1, NULL)); }$/;"	l
+listadupla	pico.y	/^listadupla: INT_LIT ':' INT_LIT { $$ = Create_node(lineno, listad_node, "listadupla", NULL, 2, create_int($1), create_int($3)); }$/;"	l
+listaexpr	pico.y	/^listaexpr: expr				{ $$ = Create_node(lineno, lexpr_node, "expr_list", NULL, 1, $1); }$/;"	l
+lookup	symbol_table.c	/^entry_t* lookup(symbol_t table, char* name)$/;"	f
+lvalue	pico.y	/^lvalue: IDF			{ CHECK_IDF($1); $$ = create_leaf(lineno, idf_node, $1, idf_aux); }$/;"	l
+lvalue_node	node.h	63;"	d
+main	y.tab.c	/^int main(int argc, char* argv[]) $/;"	f
+matrix_info	y.tab.c	/^dimList * matrix_info(Node * node, int size) {$/;"	f
+minus_node	node.h	46;"	d
+mod_node	node.h	49;"	d
+mult_node	node.h	47;"	d
+name	entry.h	/^   char* name;  \/**< um string que representa o nome de uma variavel. *\/$/;"	m	struct:entry_t
+nb_of_children	node.c	/^int nb_of_children(Node* n) {$/;"	f
+neq_node	node.h	40;"	d
+next	lista.h	/^   struct node_tac* next; \/**< nó anterior *\/$/;"	m	struct:node_tac	typeref:struct:node_tac::node_tac
+node_tac	lista.h	/^struct node_tac {$/;"	s
+nop_node	node.h	30;"	d
+not_node	node.h	51;"	d
+num_children	node.h	/^	int num_children;\/**< Numero de filhos do nodo. *\/$/;"	m	struct:_node
+num_line	node.h	/^   int num_line;   \/**< numero de linha (irrelevante por enquanto).*\/$/;"	m	struct:_node
+number_float	tokens.h	/^	float number_float;$/;"	m	union:YYSTYPE
+number_float	y.tab.c	/^	float number_float;$/;"	m	union:YYSTYPE	file:
+number_int	tokens.h	/^	int number_int;$/;"	m	union:YYSTYPE
+number_int	y.tab.c	/^	int number_int;$/;"	m	union:YYSTYPE	file:
+op	lista.h	/^   char    op[3];$/;"	m	struct:tac
+opType	lista.h	/^enum opType  { _VAR, _TMP, _VAL, _EMPTY, _COMPOUND };$/;"	g
+op_node	node.h	29;"	d
+or_node	node.h	37;"	d
+output	y.tab.c	/^FILE * output;$/;"	v
+pNodoA	avl.h	/^ *pNodoA;$/;"	t	typeref:struct:hash_entry_t
+pack_nodes	node.c	/^int pack_nodes(Node*** array_of_nodes, const int cur_size, Node* n) {$/;"	f
+param_node	node.h	26;"	d
+plus_node	node.h	45;"	d
+prev	lista.h	/^   struct node_tac* prev; \/**< próximo nó *\/$/;"	m	struct:node_tac	typeref:struct:node_tac::node_tac
+printNiveis	avl.c	/^void printNiveis(pNodoA arv, int count)$/;"	f
+print_file_table	symbol_table.c	/^int print_file_table(FILE* out, symbol_t table)$/;"	f
+print_inst_tac	lista.c	/^void print_inst_tac(FILE* out, struct tac i) {$/;"	f
+print_node	node.h	34;"	d
+print_table	symbol_table.c	/^int print_table(symbol_t table)$/;"	f
+print_tac	lista.c	/^void print_tac(FILE* out, struct node_tac * code) {$/;"	f
+print_tree	node.c	/^void print_tree(Node *n, int depth)$/;"	f
+proc_node	node.h	25;"	d
+process_decl	y.tab.c	/^int process_decl(Node * node) {$/;"	f
+progname	y.tab.c	/^char* progname;$/;"	v
+program_node	node.h	19;"	d
+proxTam	entry.h	/^	int proxTam;$/;"	m	struct:SdimList
+return_node	node.h	31;"	d
+rotDireita	avl.c	/^pNodoA rotDireita(pNodoA arv)$/;"	f
+rotDupDireita	avl.c	/^pNodoA rotDupDireita(pNodoA arv)$/;"	f
+rotDupEsquerda	avl.c	/^pNodoA rotDupEsquerda(pNodoA arv)$/;"	f
+rotEsquerda	avl.c	/^pNodoA rotEsquerda(pNodoA arv)$/;"	f
+s_symbol_t	symbol_table.h	/^} s_symbol_t,$/;"	t	typeref:struct:__s_symbol_t
+s_table	y.tab.c	/^	symbol_t s_table[MAX_SIZE];$/;"	v
+short	y.tab.c	256;"	d	file:
+size	entry.h	/^   int size;    \/**< numero de Bytes necessarios para armazenamento. *\/$/;"	m	struct:entry_t
+stackSize	y.tab.c	/^	int stackSize = 0;$/;"	v
+str	y.tab.c	/^	char str[STR_SIZE];$/;"	v
+str_node	node.h	23;"	d
+string	tokens.h	/^	char *string;$/;"	m	union:YYSTYPE
+string	y.tab.c	/^	char *string;$/;"	m	union:YYSTYPE	file:
+sup_eq_node	node.h	44;"	d
+sup_node	node.h	42;"	d
+symbol_t	symbol_table.h	/^  *symbol_t;$/;"	t	typeref:struct:__s_symbol_t
+syntax_tree	y.tab.c	/^	Node* syntax_tree = NULL;$/;"	v
+tArg1	lista.h	/^   enum opType  tArg1;$/;"	m	struct:tac	typeref:enum:tac::opType
+tArg2	lista.h	/^   enum opType  tArg2;$/;"	m	struct:tac	typeref:enum:tac::opType
+tArg3	lista.h	/^   enum opType  tArg3;$/;"	m	struct:tac	typeref:enum:tac::opType
+table_atual	y.tab.c	/^	int table_atual = 0;$/;"	v
+tac	lista.h	/^struct tac {$/;"	s
+tacType	lista.h	/^enum tacType { _LAB, _IF, _GOTO, _ATR, _PRINT, _LIDX, _RIDX };$/;"	g
+tamanho	entry.h	/^	int tamanho;$/;"	m	struct:SdimList
+tipo	pico.y	/^tipo: tipounico$/;"	l
+tipol_node	node.h	60;"	d
+tipolista	pico.y	/^tipolista: INT '[' listadupla ']'		{ $$ = Create_node(lineno, tipol_node, "INT", NULL, 1, $3); }$/;"	l
+tipou_node	node.h	59;"	d
+tipounico	pico.y	/^tipounico: INT 	{ $$ = create_leaf(lineno, tipou_node, "INT", NULL); }$/;"	l
+tmp	y.tab.c	/^	int lineno, tmp;$/;"	v
+tmpCount	y.tab.c	/^	int tmpCount = 0;$/;"	v
+tmpSize	y.tab.c	/^	int tmpSize = 0;$/;"	v
+true_node	node.h	54;"	d
+type	entry.h	/^   int type;    \/**< representacao do tipo da variavel. *\/$/;"	m	struct:entry_t
+type	lista.h	/^   enum tacType type;$/;"	m	struct:tac	typeref:enum:tac::tacType
+type	node.h	/^	enum opType type;$/;"	m	struct:attributes	typeref:enum:attributes::opType
+type	node.h	/^   Node_type type; \/**< Um dos valores definidos acima pelos # defines. *\/$/;"	m	struct:_node
+type_node	node.h	58;"	d
+type_size	y.tab.c	/^int type_size(Node * node) {$/;"	f
+umenos_node	node.h	50;"	d
+unput	lex.yy.c	188;"	d	file:
+while_node	node.h	33;"	d
+yy_accept	lex.yy.c	/^static yyconst flex_int16_t yy_accept[92] =$/;"	v	file:
+yy_at_bol	lex.yy.c	/^	int yy_at_bol;$/;"	m	struct:yy_buffer_state	file:
+yy_base	lex.yy.c	/^static yyconst flex_int16_t yy_base[93] =$/;"	v	file:
+yy_bs_column	lex.yy.c	/^    int yy_bs_column; \/**< The column count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_bs_lineno	lex.yy.c	/^    int yy_bs_lineno; \/**< The line count. *\/$/;"	m	struct:yy_buffer_state	file:
+yy_buf_pos	lex.yy.c	/^	char *yy_buf_pos;		\/* current position in input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_buf_size	lex.yy.c	/^	yy_size_t yy_buf_size;$/;"	m	struct:yy_buffer_state	file:
+yy_buffer_stack	lex.yy.c	/^static YY_BUFFER_STATE * yy_buffer_stack = 0; \/**< Stack as an array. *\/$/;"	v	file:
+yy_buffer_stack_max	lex.yy.c	/^static size_t yy_buffer_stack_max = 0; \/**< capacity of stack. *\/$/;"	v	file:
+yy_buffer_stack_top	lex.yy.c	/^static size_t yy_buffer_stack_top = 0; \/**< index of top of stack. *\/$/;"	v	file:
+yy_buffer_state	lex.yy.c	/^struct yy_buffer_state$/;"	s	file:
+yy_buffer_status	lex.yy.c	/^	int yy_buffer_status;$/;"	m	struct:yy_buffer_state	file:
+yy_c_buf_p	lex.yy.c	/^static char *yy_c_buf_p = (char *) 0;$/;"	v	file:
+yy_ch_buf	lex.yy.c	/^	char *yy_ch_buf;		\/* input buffer *\/$/;"	m	struct:yy_buffer_state	file:
+yy_chk	lex.yy.c	/^static yyconst flex_int16_t yy_chk[145] =$/;"	v	file:
+yy_create_buffer	lex.yy.c	/^    YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )$/;"	f
+yy_def	lex.yy.c	/^static yyconst flex_int16_t yy_def[93] =$/;"	v	file:
+yy_delete_buffer	lex.yy.c	/^    void yy_delete_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_did_buffer_switch_on_eof	lex.yy.c	/^static int yy_did_buffer_switch_on_eof;$/;"	v	file:
+yy_ec	lex.yy.c	/^static yyconst flex_int32_t yy_ec[256] =$/;"	v	file:
+yy_fatal_error	lex.yy.c	/^static void yy_fatal_error (yyconst char* msg )$/;"	f	file:
+yy_fill_buffer	lex.yy.c	/^	int yy_fill_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_flex_debug	lex.yy.c	/^int yy_flex_debug = 0;$/;"	v
+yy_flex_strlen	lex.yy.c	/^static int yy_flex_strlen (yyconst char * s )$/;"	f	file:
+yy_flex_strncpy	lex.yy.c	/^static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )$/;"	f	file:
+yy_flush_buffer	lex.yy.c	/^    void yy_flush_buffer (YY_BUFFER_STATE  b )$/;"	f
+yy_get_next_buffer	lex.yy.c	/^static int yy_get_next_buffer (void)$/;"	f	file:
+yy_get_previous_state	lex.yy.c	/^    static yy_state_type yy_get_previous_state (void)$/;"	f	file:
+yy_hold_char	lex.yy.c	/^static char yy_hold_char;$/;"	v	file:
+yy_init	lex.yy.c	/^static int yy_init = 0;		\/* whether we need to initialize *\/$/;"	v	file:
+yy_init_buffer	lex.yy.c	/^    static void yy_init_buffer  (YY_BUFFER_STATE  b, FILE * file )$/;"	f	file:
+yy_init_globals	lex.yy.c	/^static int yy_init_globals (void)$/;"	f	file:
+yy_input_file	lex.yy.c	/^	FILE *yy_input_file;$/;"	m	struct:yy_buffer_state	file:
+yy_is_interactive	lex.yy.c	/^	int yy_is_interactive;$/;"	m	struct:yy_buffer_state	file:
+yy_is_our_buffer	lex.yy.c	/^	int yy_is_our_buffer;$/;"	m	struct:yy_buffer_state	file:
+yy_last_accepting_cpos	lex.yy.c	/^static char *yy_last_accepting_cpos;$/;"	v	file:
+yy_last_accepting_state	lex.yy.c	/^static yy_state_type yy_last_accepting_state;$/;"	v	file:
+yy_load_buffer_state	lex.yy.c	/^static void yy_load_buffer_state  (void)$/;"	f	file:
+yy_meta	lex.yy.c	/^static yyconst flex_int32_t yy_meta[37] =$/;"	v	file:
+yy_n_chars	lex.yy.c	/^	int yy_n_chars;$/;"	m	struct:yy_buffer_state	file:
+yy_n_chars	lex.yy.c	/^static int yy_n_chars;		\/* number of characters read into yy_ch_buf *\/$/;"	v	file:
+yy_new_buffer	lex.yy.c	317;"	d	file:
+yy_nxt	lex.yy.c	/^	flex_int32_t yy_nxt;$/;"	m	struct:yy_trans_info	file:
+yy_nxt	lex.yy.c	/^static yyconst flex_int16_t yy_nxt[145] =$/;"	v	file:
+yy_reduce_print	y.tab.c	/^yy_reduce_print (YYSTYPE *yyvsp, int yyrule)$/;"	f	file:
+yy_scan_buffer	lex.yy.c	/^YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )$/;"	f
+yy_scan_bytes	lex.yy.c	/^YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )$/;"	f
+yy_scan_string	lex.yy.c	/^YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )$/;"	f
+yy_set_bol	lex.yy.c	329;"	d	file:
+yy_set_interactive	lex.yy.c	319;"	d	file:
+yy_size_t	lex.yy.c	/^typedef size_t yy_size_t;$/;"	t	file:
+yy_stack_print	y.tab.c	/^yy_stack_print (yytype_int16 *yybottom, yytype_int16 *yytop)$/;"	f	file:
+yy_start	lex.yy.c	/^static int yy_start = 0;	\/* start state number *\/$/;"	v	file:
+yy_state_type	lex.yy.c	/^typedef int yy_state_type;$/;"	t	file:
+yy_switch_to_buffer	lex.yy.c	/^    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )$/;"	f
+yy_symbol_print	y.tab.c	/^yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)$/;"	f	file:
+yy_symbol_value_print	y.tab.c	/^yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)$/;"	f	file:
+yy_trans_info	lex.yy.c	/^struct yy_trans_info$/;"	s	file:
+yy_try_NUL_trans	lex.yy.c	/^    static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )$/;"	f	file:
+yy_verify	lex.yy.c	/^	flex_int32_t yy_verify;$/;"	m	struct:yy_trans_info	file:
+yyalloc	lex.yy.c	/^void *yyalloc (yy_size_t  size )$/;"	f
+yyalloc	y.tab.c	/^union yyalloc$/;"	u	file:
+yychar	y.tab.c	/^int yychar;$/;"	v
+yycheck	y.tab.c	/^static const yytype_uint8 yycheck[] =$/;"	v	file:
+yyclearin	y.tab.c	753;"	d	file:
+yyconst	lex.yy.c	106;"	d	file:
+yyconst	lex.yy.c	108;"	d	file:
+yydebug	y.tab.c	/^int yydebug;$/;"	v
+yydefact	y.tab.c	/^static const yytype_uint8 yydefact[] =$/;"	v	file:
+yydefgoto	y.tab.c	/^static const yytype_int8 yydefgoto[] =$/;"	v	file:
+yydestruct	y.tab.c	/^yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep)$/;"	f	file:
+yyensure_buffer_stack	lex.yy.c	/^static void yyensure_buffer_stack (void)$/;"	f	file:
+yyerrok	y.tab.c	752;"	d	file:
+yyerror	y.tab.c	/^void yyerror(char* s) {$/;"	f
+yyfree	lex.yy.c	/^void yyfree (void * ptr )$/;"	f
+yyget_debug	lex.yy.c	/^int yyget_debug  (void)$/;"	f
+yyget_in	lex.yy.c	/^FILE *yyget_in  (void)$/;"	f
+yyget_leng	lex.yy.c	/^int yyget_leng  (void)$/;"	f
+yyget_lineno	lex.yy.c	/^int yyget_lineno  (void)$/;"	f
+yyget_out	lex.yy.c	/^FILE *yyget_out  (void)$/;"	f
+yyget_text	lex.yy.c	/^char *yyget_text  (void)$/;"	f
+yyin	lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yyinput	lex.yy.c	/^    static int yyinput (void)$/;"	f	file:
+yyleng	lex.yy.c	/^int yyleng;$/;"	v
+yyless	lex.yy.c	175;"	d	file:
+yyless	lex.yy.c	1797;"	d	file:
+yyless	lex.yy.c	1798;"	d	file:
+yylex_destroy	lex.yy.c	/^int yylex_destroy  (void)$/;"	f
+yylineno	lex.yy.c	/^int yylineno = 1;$/;"	v
+yylval	y.tab.c	/^YYSTYPE yylval;$/;"	v
+yymore	lex.yy.c	518;"	d	file:
+yynerrs	y.tab.c	/^int yynerrs;$/;"	v
+yyout	lex.yy.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
+yypact	y.tab.c	/^static const yytype_int16 yypact[] =$/;"	v	file:
+yyparse	y.tab.c	/^yyparse (void *YYPARSE_PARAM)$/;"	f
+yypgoto	y.tab.c	/^static const yytype_int16 yypgoto[] =$/;"	v	file:
+yypop_buffer_state	lex.yy.c	/^void yypop_buffer_state (void)$/;"	f
+yyprhs	y.tab.c	/^static const yytype_uint8 yyprhs[] =$/;"	v	file:
+yypush_buffer_state	lex.yy.c	/^void yypush_buffer_state (YY_BUFFER_STATE new_buffer )$/;"	f
+yyr1	y.tab.c	/^static const yytype_uint8 yyr1[] =$/;"	v	file:
+yyr2	y.tab.c	/^static const yytype_uint8 yyr2[] =$/;"	v	file:
+yyrealloc	lex.yy.c	/^void *yyrealloc  (void * ptr, yy_size_t  size )$/;"	f
+yyrestart	lex.yy.c	/^    void yyrestart  (FILE * input_file )$/;"	f
+yyrhs	y.tab.c	/^static const yytype_int8 yyrhs[] =$/;"	v	file:
+yyrline	y.tab.c	/^static const yytype_uint8 yyrline[] =$/;"	v	file:
+yyset_debug	lex.yy.c	/^void yyset_debug (int  bdebug )$/;"	f
+yyset_in	lex.yy.c	/^void yyset_in (FILE *  in_str )$/;"	f
+yyset_lineno	lex.yy.c	/^void yyset_lineno (int  line_number )$/;"	f
+yyset_out	lex.yy.c	/^void yyset_out (FILE *  out_str )$/;"	f
+yyss_alloc	y.tab.c	/^  yytype_int16 yyss_alloc;$/;"	m	union:yyalloc	file:
+yystos	y.tab.c	/^static const yytype_uint8 yystos[] =$/;"	v	file:
+yystpcpy	y.tab.c	/^yystpcpy (char *yydest, const char *yysrc)$/;"	f	file:
+yystpcpy	y.tab.c	1051;"	d	file:
+yystrlen	y.tab.c	/^yystrlen (const char *yystr)$/;"	f	file:
+yystrlen	y.tab.c	1028;"	d	file:
+yystype	tokens.h	123;"	d
+yystype	y.tab.c	244;"	d	file:
+yysyntax_error	y.tab.c	/^yysyntax_error (char *yyresult, int yystate, int yychar)$/;"	f	file:
+yytable	y.tab.c	/^static const yytype_int8 yytable[] =$/;"	v	file:
+yyterminate	lex.yy.c	682;"	d	file:
+yytext	lex.yy.c	/^char *yytext;$/;"	v
+yytext_ptr	lex.yy.c	357;"	d	file:
+yytname	y.tab.c	/^static const char *const yytname[] =$/;"	v	file:
+yytnamerr	y.tab.c	/^yytnamerr (char *yyres, const char *yystr)$/;"	f	file:
+yytokentype	tokens.h	/^   enum yytokentype {$/;"	g
+yytokentype	y.tab.c	/^   enum yytokentype {$/;"	g	file:
+yytoknum	y.tab.c	/^static const yytype_uint16 yytoknum[] =$/;"	v	file:
+yytranslate	y.tab.c	/^static const yytype_uint8 yytranslate[] =$/;"	v	file:
+yytype_int16	y.tab.c	/^typedef YYTYPE_INT16 yytype_int16;$/;"	t	file:
+yytype_int16	y.tab.c	/^typedef short int yytype_int16;$/;"	t	file:
+yytype_int8	y.tab.c	/^typedef YYTYPE_INT8 yytype_int8;$/;"	t	file:
+yytype_int8	y.tab.c	/^typedef short int yytype_int8;$/;"	t	file:
+yytype_int8	y.tab.c	/^typedef signed char yytype_int8;$/;"	t	file:
+yytype_uint16	y.tab.c	/^typedef YYTYPE_UINT16 yytype_uint16;$/;"	t	file:
+yytype_uint16	y.tab.c	/^typedef unsigned short int yytype_uint16;$/;"	t	file:
+yytype_uint8	y.tab.c	/^typedef YYTYPE_UINT8 yytype_uint8;$/;"	t	file:
+yytype_uint8	y.tab.c	/^typedef unsigned char yytype_uint8;$/;"	t	file:
+yyunput	lex.yy.c	/^    static void yyunput (int c, register char * yy_bp )$/;"	f	file:
+yyvs_alloc	y.tab.c	/^  YYSTYPE yyvs_alloc;$/;"	m	union:yyalloc	file:
+yywrap	lex.yy.c	343;"	d	file:
