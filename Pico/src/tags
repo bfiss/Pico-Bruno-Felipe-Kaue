@@ -1,9 +1,18 @@
+	Session.vim	/^map  :w$/;"	m
+	Session.vim	/^map!  :w$/;"	m
+	Session.vim	/^inoremap  u$/;"	m
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+0	Session.vim	/^normal! 0$/;"	m
+<F8>	Session.vim	/^map <F8> :make -B$/;"	m
+<F8>	Session.vim	/^map! <F8> :make -B$/;"	m
+<F9>	Session.vim	/^map <F9> :make$/;"	m
+<F9>	Session.vim	/^map! <F9> :make$/;"	m
+<Plug>NetrwBrowseX	Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)$/;"	m
 AND	tokens.h	/^     AND = 269,$/;"	e	enum:yytokentype
 AND	tokens.h	84;"	d
 AND	y.tab.c	/^     AND = 269,$/;"	e	enum:yytokentype	file:
@@ -121,6 +130,7 @@ PRINTF	tokens.h	/^     PRINTF = 285$/;"	e	enum:yytokentype
 PRINTF	tokens.h	100;"	d
 PRINTF	y.tab.c	/^     PRINTF = 285$/;"	e	enum:yytokentype	file:
 PRINTF	y.tab.c	221;"	d	file:
+Q	Session.vim	/^map Q gq$/;"	m
 QUOTE	tokens.h	/^     QUOTE = 263,$/;"	e	enum:yytokentype
 QUOTE	tokens.h	78;"	d
 QUOTE	y.tab.c	/^     QUOTE = 263,$/;"	e	enum:yytokentype	file:
@@ -132,6 +142,7 @@ REPEAT	y.tab.c	/^     REPEAT = 283,$/;"	e	enum:yytokentype	file:
 REPEAT	y.tab.c	219;"	d	file:
 STR_SIZE	y.tab.c	114;"	d	file:
 SdimList	entry.h	/^typedef struct SdimList {$/;"	s
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
 TABLE_SIZE	symbol_table.h	12;"	d
 TABLE_SIZE	symbol_table.h	14;"	d
 TCHAR	entry.h	11;"	d
@@ -408,6 +419,7 @@ free_table	symbol_table.c	/^void free_table(symbol_t* table)$/;"	f
 geraLabel	y.tab.c	/^int geraLabel() {$/;"	f
 geraTmp	y.tab.c	/^int geraTmp() {$/;"	f
 gera_tac	y.tab.c	/^struct node_tac * gera_tac(Node * node) {$/;"	f
+gx	Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 hash	symbol_table.c	/^unsigned long hash(char *str)$/;"	f
 hash_entry_t	avl.h	/^ hash_entry_t,$/;"	t	typeref:struct:hash_entry_t
 hash_entry_t	avl.h	/^typedef struct hash_entry_t{$/;"	s
@@ -489,6 +501,11 @@ rotDireita	avl.c	/^pNodoA rotDireita(pNodoA arv)$/;"	f
 rotDupDireita	avl.c	/^pNodoA rotDupDireita(pNodoA arv)$/;"	f
 rotDupEsquerda	avl.c	/^pNodoA rotDupEsquerda(pNodoA arv)$/;"	f
 rotEsquerda	avl.c	/^pNodoA rotEsquerda(pNodoA arv)$/;"	f
+s:cpo_save	Session.vim	/^let s:cpo_save=&cpo$/;"	v
+s:l	Session.vim	/^let s:l = 18 - ((12 * winheight(0) + 13) \/ 26)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 s_symbol_t	symbol_table.h	/^} s_symbol_t,$/;"	t	typeref:struct:__s_symbol_t
 s_table	y.tab.c	/^	symbol_t s_table[MAX_SIZE];$/;"	v
 short	y.tab.c	256;"	d	file:
@@ -667,3 +684,4 @@ yytype_uint8	y.tab.c	/^typedef unsigned char yytype_uint8;$/;"	t	file:
 yyunput	lex.yy.c	/^    static void yyunput (int c, register char * yy_bp )$/;"	f	file:
 yyvs_alloc	y.tab.c	/^  YYSTYPE yyvs_alloc;$/;"	m	union:yyalloc	file:
 yywrap	lex.yy.c	343;"	d	file:
+zt	Session.vim	/^normal! zt$/;"	m

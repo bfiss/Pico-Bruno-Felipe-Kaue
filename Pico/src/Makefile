@@ -11,7 +11,7 @@ test: test_etapa4
 
 ## Etapa 4
 etapa4: pico
-	ctags *
+	#ctags *
 
 test_etapa4: pico
 

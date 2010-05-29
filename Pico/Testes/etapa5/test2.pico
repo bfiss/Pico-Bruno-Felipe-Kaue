@@ -1,0 +1,6 @@
+a: int;
+if(true | a == 1 / 0) then
+	print(0);
+else print(1);
+end;
+

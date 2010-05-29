@@ -3,4 +3,5 @@ all:
 
 clean:
 	rm -rf *.tac *.s *.o *~
+	./rm_tests.sh
 
