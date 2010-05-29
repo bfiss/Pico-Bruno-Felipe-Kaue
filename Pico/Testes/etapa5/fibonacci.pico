@@ -2,11 +2,10 @@ a, b, t, n: int;
 n = 10;
 a = 0;
 b = 1;
-while (a < n) {
+while(a < n) {
 	print(a);
 	t = a;
 	a = b;
-	b = t + b;
-	n = n + 1;
+	b = t + a;
 };
 

@@ -82,13 +82,23 @@ void print_inst_tac(FILE* out, struct tac i) {
 			}
 			break;
 		case _RIDX:
+			/* é 000(Rx)(000(SP)), ou seja, na ordem inversa */
+			/*
 			fprintf(out,"%03i:   %03i(%s) := %03i(SP)(",line,i.arg1,i.tArg1==_VAR?"SP":"Rx",i.arg2);
 			if( i.tArg3 == _VAL )
 				fprintf(out,"%i)\n",i.arg3);
 			else
-				fprintf(out,"%03i(%s))\n",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+				fprintf(out,"%03i(%s))\n",i.arg3,i.tArg3==_VAR?"SP":"Rx");//*/
+			fprintf(out,"%03i:   %03i(%s) := ",line,i.arg1,i.tArg1==_VAR?"SP":"Rx");
+			if( i.tArg3 == _VAL )
+				fprintf(out,"%i",i.arg3);
+			else
+				fprintf(out,"%03i(%s)",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+			fprintf(out,"(%03i(SP))\n",i.arg2);
 			break;
 		case _LIDX:
+			/* é 000(Rx)(000(SP)), ou seja, na ordem inversa */
+			/*
 			fprintf(out,"%03i:   %03i(%s)(",line,i.arg1,i.tArg1==_VAR?"SP":"Rx");
 			if( i.tArg3 == _VAL )
 				fprintf(out,"%i) := ",i.arg3);
@@ -97,7 +107,17 @@ void print_inst_tac(FILE* out, struct tac i) {
 			if( i.tArg2 == _VAL )
 				fprintf(out,"%i\n",i.arg2);
 			else
-				fprintf(out,"%03i(%s)\n",i.arg2,i.tArg2==_VAR?"SP":"Rx");
+				fprintf(out,"%03i(%s)\n",i.arg2,i.tArg2==_VAR?"SP":"Rx");//*/
+			fprintf(out,"%03i:   ",line);
+			if( i.tArg3 == _VAL )
+				fprintf(out,"%i",i.arg3);
+			else
+				fprintf(out,"%03i(%s)",i.arg3,i.tArg3==_VAR?"SP":"Rx");
+			fprintf(out,"(%03i(%s)) := ",i.arg1,i.tArg1==_VAR?"SP":"Rx");
+			if( i.tArg2 == _VAL )
+				fprintf(out,"%i\n",i.arg2);
+			else
+				fprintf(out,"%03i(%s)\n",i.arg2,i.tArg2==_VAR?"SP":"Rx");//*/
 			break;
 	}
 	++line;

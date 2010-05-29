@@ -1,0 +1,7 @@
+var: int[0:0];
+a: int;
+a = 1;
+var[0] = 1;
+print(a);
+print(var[0]);
+

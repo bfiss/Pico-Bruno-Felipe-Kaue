@@ -1,10 +1,9 @@
 #!/bin/bash
-prog_names=("fibonacci" "fibonacci")
-for i in {0..0}
+cd "../Testes/etapa5"
+for prog in *.pico
 do
-	prog_name=${prog_names[$i]}
-	echo "$prog_name"
-	./pico -o "../Testes/etapa5/$prog_name.tac" "../Testes/etapa5/$prog_name.pico"
-
+	echo "$prog"
+	prog_name=${prog%\.*}
+	./run_test.sh "$prog_name"
 done
 

@@ -1,0 +1,15 @@
+a, b, t, n, done: int;
+n = 10;
+a = 0;
+b = 1;
+done = 0;
+while(!done == 1) {
+	print(a);
+	t = a;
+	a = b;
+	b = t + a;
+	if(a >= n) then
+		done = 1;
+	end;
+};
+
