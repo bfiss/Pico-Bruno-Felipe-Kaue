@@ -1,5 +1,4 @@
 #!/bin/bash
-cd "../Testes/etapa5"
 for prog in *.pico
 do
 	echo "$prog"

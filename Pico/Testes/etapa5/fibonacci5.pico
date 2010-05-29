@@ -1,0 +1,21 @@
+a, b, t, n, done: int;
+vars: int[0:4,0:4];
+a = 0;
+b = 1;
+t = 2;
+n = 3;
+done = 4;
+vars[a, a] = 0;
+vars[b, b] = 1;
+vars[n, n] = 10;
+vars[done, done] = vars[a, a];
+while(!vars[done, done] == 1) {
+	print(vars[a, a]);
+	vars[t, t] = vars[a, a];
+	vars[a, a] = vars[b, b];
+	vars[b, b] = vars[t, t] + vars[a, a];
+	if(vars[a, a] >= vars[n, n]) then
+		vars[done, done] = 1;
+	end;
+};
+

@@ -1,0 +1,32 @@
+mat: int[1:5, 3:6, 2:4];
+a, b, c: int;
+
+a = 1;
+while(a <= 5) {
+	b = 3;
+	while(b <= 6) {
+		c = 2;
+		while(c <= 4) {
+			mat[a, b, c] = a * 100 + b * 10 + c;
+			c = c + 1;
+		};
+		b = b + 1;
+	};
+	a = a + 1;
+};
+
+a = 1;
+while(a <= 5) {
+	print(1111111111);
+	b = 3;
+	while(b <= 6) {
+		c = 2;
+		while(c <= 4) {
+			print(mat[a, b, c]);
+			c = c + 1;
+		};
+		b = b + 1;
+	};
+	a = a + 1;
+};
+
